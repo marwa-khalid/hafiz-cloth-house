@@ -6,14 +6,8 @@
             "use": "@vercel/node"
         }
     ],
-    "routes": [
-        {
-            "src": "/images/(.*)",
-            "dest": "/public/images/$1"
-        }, 
-        {
-            "src": "/(.*)",
-            "dest": "/"
-        } 
-    ]
+    "static":
+    {
+        "src": "./public" 
+    } 
 }
