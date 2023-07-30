@@ -8,6 +8,6 @@
     ],
     "static":
     {
-        "src": "./public" 
+        "source": "./public" 
     } 
 }
