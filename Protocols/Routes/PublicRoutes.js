@@ -5,7 +5,7 @@ const HomePageController = require("../../Controllers/HomePageController");
 const ProductsController = require("../../Controllers/ProductsController");
 const ProductViewController = require("../../Controllers/ProductViewController");
 
-const { HomePage, AboutUsPage, ContactUsPage, } = HomePageController;
+const { HomePage } = HomePageController;
 const { ProductsPage } = ProductsController;
 const { ProductViewPage } = ProductViewController;
 
