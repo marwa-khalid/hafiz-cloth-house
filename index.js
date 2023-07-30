@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // SET PUBLIC AND VIEW DIRECTORY PATHS
-app.use( express.static("Public") );
+app.use( express.static("public") );
 var path = require('path');
 app.set('views', path.join(__dirname, 'Views'));
 app.set('view engine', 'ejs');
