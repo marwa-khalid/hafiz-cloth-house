@@ -1,0 +1,87 @@
+<html lang="en">
+    <head>
+        <title>
+            Hafiz Cloth House
+        </title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <%- include("./Components/ImportCssFiles"); %>
+    </head>
+    <body>
+        <!-- Embed NavBar Component -->
+        <%
+            var NavBarData = { "SignedIn": false, "UserType": '' };
+        %>
+        <%- include("./Components/NavBar", { NavBarData: NavBarData }); %>
+
+        <!-- Embed Breadcrumb Component -->
+        <%
+            var BreadcrumbData = [
+                                    {
+                                        "PageName": "Home",
+                                    }
+                                ];
+        %>
+        <%- include("./Components/Breadcrumb", {BreadcrumbData: BreadcrumbData}); %>
+        
+        <!-- Current Page Body -->
+        <div class="container-fluid" id="body-container">
+            <section class="product-details">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="image-slider">
+                           
+                            <div class="product-images">
+                                <img src="./images/MehakButt.jpg" class="active" alt="">
+                                <img src="./images/pic33.jpeg" alt="">
+                                <img src="./images/pic33.jpeg" alt="">
+                                <img src="./images/pic33.jpeg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="details">
+                            <h2 class="product-brand">calvin klein</h2>
+                        
+                            <span class="product-price">$99</span>
+                            <span class="product-actual-price">$200</span>
+                            <span class="product-discount">(50% off)</span>
+                                  
+                        <div class="both-buttons">
+                            <button class="btn cart-btn product-intro-button">add to cart</button>
+                            <button class="btn product-intro-button">add to wishlist</button>
+                            </div>
+                        <section class="detail-des">
+                            <h2 class="heading">description:</h2>
+                             <p class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+                             </p>
+            
+                            <div class="line"></div>
+                            <h2 class="heading" style="margin-top: 1rem;">Delivery Details:</h2>
+                             <p class="des"> Delivery can take upto 5-7 business days. Your patience is appreciated!
+                             </p>
+            
+                            <div class="line"></div>
+                            <h2 class="heading" style="margin-top: 1rem;">Note:</h2>
+                            <p class="des"> Actual product color may vary slightly from the image.
+                            </p>
+                        </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+        </div>
+        
+        <!-- Embed Footer Component -->
+        <%- include("./Components/Footer"); %>
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <%- include("./Components/ImportJavascriptFiles"); %>
+    </body>
+</html>
