@@ -12,5 +12,8 @@
   },
   "scripts": {
     "start": "node App.js"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }
