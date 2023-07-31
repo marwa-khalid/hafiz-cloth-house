@@ -10,8 +10,8 @@ module.exports = {
         destination: './public/layout/css/:path*',
       },
       {
-        source: '/layout/js/:path*',
-        destination: './public/layout/js/:path*',
+        source: '/layout/javascript/:path*',
+        destination: './public/layout/javascript/:path*',
       },
     ];
   },
