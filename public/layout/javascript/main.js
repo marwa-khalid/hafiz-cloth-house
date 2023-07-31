@@ -1,6 +1,8 @@
 // Page Bindings (This will Execute after Page Load)
 $(function ()
 {
+    $('.redirect-to-products').click(RedirectToProducts);
+    
     const productImages = document.querySelectorAll(".product-images img"); // selecting all image thumbs
     const productImageSlide = document.querySelector(".image-slider"); // seclecting image slider element
     const sizeBtns = document.querySelectorAll('.size-radio-btn'); // selecting size buttons
@@ -48,8 +50,6 @@ $(function ()
     {
         $(this).find('.img-subcontent').fadeOut(200);
     });
-
-    $('.redirect-to-products').click(RedirectToProducts);
 });
 
 function RedirectToProducts(event) 
