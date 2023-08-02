@@ -29,21 +29,21 @@
         <!-- Current Page Body -->
         <div class="container-fluid" id="body-container">
             <!-- CAROUSEL -->
-            <div class=" row">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="row">
+                <div id="carouselExampleIndicators" class="carousel slide page-top-carousel" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                     </ol>
-                    <div class=" container-fluid carousel-inner">
-                        <div class="carousel-item active">
+                    <div class="carousel-inner">
+                        <div class="carousel-item page-top-carousel-item active">
                             <img class="d-block w-100" src="./images/pic11.jpg" alt="First slide">
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item page-top-carousel-item">
                             <img class="d-block w-100" src="./images/pic22.jpeg" alt="Second slide">
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item page-top-carousel-item">
                             <img class="d-block w-100" src="./images/pic33.jpeg" alt="Third slide">
                         </div>
                     </div>
@@ -114,170 +114,398 @@
 
             <!-- BEST SELLING PRODUCTS -->
             <div class="container py-5">
-                <div class="row">  
-                    <div class="col-md-3">
-                        <div class="dress-card">
-                        <div class="dress-card-head">
-                            <img
-                            class="dress-card-img-top"
-                            src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7578935/2018/10/23/d7b740bc-e00e-4bec-97aa-65016f8ff2e71540289479612-Harpa-Women-Dresses-2331540289479465-1.jpg"
-                            alt=""
-                            />
-                            <div class="surprise-bubble">
-                            <span class="dress-card-heart">
-                                <i class="fas fa-heart"></i> </span
-                            ><a href="#"> <span>More</span></a>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="product-card-carousel" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row product-card-row">
+                                        <div class="col-lg-3 col-md-4 product-card">
+                                            <div class="dress-card">
+                                                <div class="dress-card-head">
+                                                    <img
+                                                        class="dress-card-img-top"
+                                                        src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7578929/2018/10/23/86988cdc-cbe3-4b13-93f9-b37ad571b4761540274855321-Harpa-Women-Dresses-9171540274855158-1.jpg"
+                                                        alt=""
+                                                    />
+                                                    <div class="surprise-bubble">
+                                                        <span class="dress-card-heart">
+                                                            <i class="fas fa-heart"></i> 
+                                                        </span>
+                                                        <a href="#"> 
+                                                            <span>More</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="dress-card-body">
+                                                    <h4 class="dress-card-title">Harpa 1</h4>
+                                                    <p class="dress-card-para">Womans printed clothing</p>
+                                                    <p class="dress-card-para">
+                                                        <span class="dress-card-price">Rs.839 &ensp;</span>
+                                                        <span class="dress-card-crossed">Rs.2099</span>
+                                                        <span class="dress-card-off">&ensp;(60% OFF)</span>
+                                                    </p>
+                                                    <div class="row">
+                                                        <div class="col-md-6 card-button">
+                                                            <a href="">
+                                                                <div class="card-button-inner bag-button">
+                                                                    Add to Cart
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-md-6 card-button">
+                                                            <a href="">
+                                                                <div class="card-button-inner wish-button">
+                                                                    Wiishlist
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 product-card">
+                                            <div class="dress-card">
+                                            <div class="dress-card-head">
+                                                <img
+                                                class="dress-card-img-top"
+                                                src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7578935/2018/10/23/d7b740bc-e00e-4bec-97aa-65016f8ff2e71540289479612-Harpa-Women-Dresses-2331540289479465-1.jpg"
+                                                alt=""
+                                                />
+                                                <div class="surprise-bubble">
+                                                <span class="dress-card-heart">
+                                                    <i class="fas fa-heart"></i> </span
+                                                ><a href="#"> <span>More</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="dress-card-body">
+                                                <h4 class="dress-card-title">Harpa 2</h4>
+                                                <p class="dress-card-para">Embroidered Shirt</p>
+                                                <p class="dress-card-para">
+                                                <span class="dress-card-price">Rs.839 &ensp;</span
+                                                ><span class="dress-card-crossed">Rs.2099</span
+                                                ><span class="dress-card-off">&ensp;(60% OFF)</span>
+                                                </p>
+                                                <div class="row">
+                                                <div class="col-md-6 card-button">
+                                                    <a href=""
+                                                    ><div class="card-button-inner bag-button">
+                                                        Add to Cart
+                                                    </div></a
+                                                    >
+                                                </div>
+                                                <div class="col-md-6 card-button">
+                                                    <a href=""
+                                                    ><div class="card-button-inner wish-button">
+                                                        Wishlist
+                                                    </div></a
+                                                    >
+                                                </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 product-card">
+                                            <div class="dress-card">
+                                            <div class="dress-card-head">
+                                                <img
+                                                class="dress-card-img-top"
+                                                src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/6625378/2018/6/5/fcec8d8e-4253-4fa4-ae6e-c6805b3b8fd31528183265021-na-2331528183264786-1.jpg"
+                                                alt=""
+                                                />
+                                                <div class="surprise-bubble">
+                                                <span class="dress-card-heart">
+                                                    <i class="fas fa-heart"></i> </span
+                                                ><a href="#"> <span>More</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="dress-card-body">
+                                                <h4 class="dress-card-title">Harpa 3</h4>
+                                                <p class="dress-card-para">Womans printed clothing</p>
+                                                <p class="dress-card-para">
+                                                <span class="dress-card-price">Rs.839 &ensp;</span
+                                                ><span class="dress-card-crossed">Rs.2099</span
+                                                ><span class="dress-card-off">&ensp;(60% OFF)</span>
+                                                </p>
+                                                <div class="row">
+                                                <div class="col-md-6 card-button">
+                                                    <a href=""
+                                                    ><div class="card-button-inner bag-button">
+                                                        Add to Cart
+                                                    </div></a
+                                                    >
+                                                </div>
+                                                <div class="col-md-6 card-button">
+                                                    <a href=""
+                                                    ><div class="card-button-inner wish-button">
+                                                        Whishlist
+                                                    </div></a
+                                                    >
+                                                </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 product-card">
+                                            <div class="dress-card">
+                                            <div class="dress-card-head">
+                                                <img
+                                                class="dress-card-img-top"
+                                                src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7578929/2018/10/23/86988cdc-cbe3-4b13-93f9-b37ad571b4761540274855321-Harpa-Women-Dresses-9171540274855158-1.jpg"
+                                                alt=""
+                                                />
+                                                <div class="surprise-bubble">
+                                                <span class="dress-card-heart">
+                                                    <i class="fas fa-heart"></i> </span
+                                                ><a href="#"> <span>More</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="dress-card-body">
+                                                <h4 class="dress-card-title">Harpa 4</h4>
+                                                <p class="dress-card-para">Womans printed clothing</p>
+                                                <p class="dress-card-para">
+                                                <span class="dress-card-price">Rs.839 &ensp;</span
+                                                ><span class="dress-card-crossed">Rs.2099</span
+                                                ><span class="dress-card-off">&ensp;(60% OFF)</span>
+                                                </p>
+                                                <div class="row">
+                                                <div class="col-md-6 card-button">
+                                                    <a href=""
+                                                    ><div class="card-button-inner bag-button">
+                                                        Add to Cart
+                                                    </div></a
+                                                    >
+                                                </div>
+                                                <div class="col-md-6 card-button">
+                                                    <a href=""
+                                                    ><div class="card-button-inner wish-button">
+                                                        Wiishlist
+                                                    </div></a
+                                                    >
+                                                </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 product-card">
+                                            <div class="dress-card">
+                                            <div class="dress-card-head">
+                                                <img
+                                                class="dress-card-img-top"
+                                                src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7578940/2018/10/23/fe701151-69e6-4e20-9e2a-ace63081a8e11540282217137-Harpa-Women-Dresses-191540282216937-5.jpg"
+                                                alt=""
+                                                />
+                                                <div class="surprise-bubble">
+                                                <span class="dress-card-heart">
+                                                    <i class="fas fa-heart"></i> </span
+                                                ><a href="#"> <span>More</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="dress-card-body">
+                                                <h4 class="dress-card-title">Harpa 5</h4>
+                                                <p class="dress-card-para">Womans printed clothing</p>
+                                                <p class="dress-card-para">
+                                                <span class="dress-card-price">Rs.839 &ensp;</span
+                                                ><span class="dress-card-crossed">Rs.2099</span
+                                                ><span class="dress-card-off">&ensp;(60% OFF)</span>
+                                                </p>
+                                                <div class="row">
+                                                <div class="col-md-6 card-button">
+                                                    <a href=""
+                                                    ><div class="card-button-inner bag-button">
+                                                        Add to Cart
+                                                    </div></a
+                                                    >
+                                                </div>
+                                                <div class="col-md-6 card-button">
+                                                    <a href=""
+                                                    ><div class="card-button-inner wish-button">
+                                                        Wishlist
+                                                    </div></a
+                                                    >
+                                                </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 product-card">
+                                            <div class="dress-card">
+                                            <div class="dress-card-head">
+                                                <img
+                                                class="dress-card-img-top"
+                                                src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7578935/2018/10/23/d7b740bc-e00e-4bec-97aa-65016f8ff2e71540289479612-Harpa-Women-Dresses-2331540289479465-1.jpg"
+                                                alt=""
+                                                />
+                                                <div class="surprise-bubble">
+                                                <span class="dress-card-heart">
+                                                    <i class="fas fa-heart"></i> </span
+                                                ><a href="#"> <span>More</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="dress-card-body">
+                                                <h4 class="dress-card-title">Harpa 6</h4>
+                                                <p class="dress-card-para">Embroidered Shirt</p>
+                                                <p class="dress-card-para">
+                                                <span class="dress-card-price">Rs.839 &ensp;</span
+                                                ><span class="dress-card-crossed">Rs.2099</span
+                                                ><span class="dress-card-off">&ensp;(60% OFF)</span>
+                                                </p>
+                                                <div class="row">
+                                                <div class="col-md-6 card-button">
+                                                    <a href=""
+                                                    ><div class="card-button-inner bag-button">
+                                                        Add to Cart
+                                                    </div></a
+                                                    >
+                                                </div>
+                                                <div class="col-md-6 card-button">
+                                                    <a href=""
+                                                    ><div class="card-button-inner wish-button">
+                                                        Wishlist
+                                                    </div></a
+                                                    >
+                                                </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 product-card">
+                                            <div class="dress-card">
+                                            <div class="dress-card-head">
+                                                <img
+                                                class="dress-card-img-top"
+                                                src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/6625378/2018/6/5/fcec8d8e-4253-4fa4-ae6e-c6805b3b8fd31528183265021-na-2331528183264786-1.jpg"
+                                                alt=""
+                                                />
+                                                <div class="surprise-bubble">
+                                                <span class="dress-card-heart">
+                                                    <i class="fas fa-heart"></i> </span
+                                                ><a href="#"> <span>More</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="dress-card-body">
+                                                <h4 class="dress-card-title">Harpa 7</h4>
+                                                <p class="dress-card-para">Womans printed clothing</p>
+                                                <p class="dress-card-para">
+                                                <span class="dress-card-price">Rs.839 &ensp;</span
+                                                ><span class="dress-card-crossed">Rs.2099</span
+                                                ><span class="dress-card-off">&ensp;(60% OFF)</span>
+                                                </p>
+                                                <div class="row">
+                                                <div class="col-md-6 card-button">
+                                                    <a href=""
+                                                    ><div class="card-button-inner bag-button">
+                                                        Add to Cart
+                                                    </div></a
+                                                    >
+                                                </div>
+                                                <div class="col-md-6 card-button">
+                                                    <a href=""
+                                                    ><div class="card-button-inner wish-button">
+                                                        Whishlist
+                                                    </div></a
+                                                    >
+                                                </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 product-card">
+                                            <div class="dress-card">
+                                            <div class="dress-card-head">
+                                                <img
+                                                class="dress-card-img-top"
+                                                src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7578929/2018/10/23/86988cdc-cbe3-4b13-93f9-b37ad571b4761540274855321-Harpa-Women-Dresses-9171540274855158-1.jpg"
+                                                alt=""
+                                                />
+                                                <div class="surprise-bubble">
+                                                <span class="dress-card-heart">
+                                                    <i class="fas fa-heart"></i> </span
+                                                ><a href="#"> <span>More</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="dress-card-body">
+                                                <h4 class="dress-card-title">Harpa 8</h4>
+                                                <p class="dress-card-para">Womans printed clothing</p>
+                                                <p class="dress-card-para">
+                                                <span class="dress-card-price">Rs.839 &ensp;</span
+                                                ><span class="dress-card-crossed">Rs.2099</span
+                                                ><span class="dress-card-off">&ensp;(60% OFF)</span>
+                                                </p>
+                                                <div class="row">
+                                                <div class="col-md-6 card-button">
+                                                    <a href=""
+                                                    ><div class="card-button-inner bag-button">
+                                                        Add to Cart
+                                                    </div></a
+                                                    >
+                                                </div>
+                                                <div class="col-md-6 card-button">
+                                                    <a href=""
+                                                    ><div class="card-button-inner wish-button">
+                                                        Wiishlist
+                                                    </div></a
+                                                    >
+                                                </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 product-card">
+                                            <div class="dress-card">
+                                            <div class="dress-card-head">
+                                                <img
+                                                class="dress-card-img-top"
+                                                src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7578940/2018/10/23/fe701151-69e6-4e20-9e2a-ace63081a8e11540282217137-Harpa-Women-Dresses-191540282216937-5.jpg"
+                                                alt=""
+                                                />
+                                                <div class="surprise-bubble">
+                                                <span class="dress-card-heart">
+                                                    <i class="fas fa-heart"></i> </span
+                                                ><a href="#"> <span>More</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="dress-card-body">
+                                                <h4 class="dress-card-title">Harpa 9</h4>
+                                                <p class="dress-card-para">Womans printed clothing</p>
+                                                <p class="dress-card-para">
+                                                <span class="dress-card-price">Rs.839 &ensp;</span
+                                                ><span class="dress-card-crossed">Rs.2099</span
+                                                ><span class="dress-card-off">&ensp;(60% OFF)</span>
+                                                </p>
+                                                <div class="row">
+                                                <div class="col-md-6 card-button">
+                                                    <a href=""
+                                                    ><div class="card-button-inner bag-button">
+                                                        Add to Cart
+                                                    </div></a
+                                                    >
+                                                </div>
+                                                <div class="col-md-6 card-button">
+                                                    <a href=""
+                                                    ><div class="card-button-inner wish-button">
+                                                        Wishlist
+                                                    </div></a
+                                                    >
+                                                </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="dress-card-body">
-                            <h4 class="dress-card-title">Harpa</h4>
-                            <p class="dress-card-para">Embroidered Shirt</p>
-                            <p class="dress-card-para">
-                            <span class="dress-card-price">Rs.839 &ensp;</span
-                            ><span class="dress-card-crossed">Rs.2099</span
-                            ><span class="dress-card-off">&ensp;(60% OFF)</span>
-                            </p>
-                            <div class="row">
-                            <div class="col-md-6 card-button">
-                                <a href=""
-                                ><div class="card-button-inner bag-button">
-                                    Add to Cart
-                                </div></a
-                                >
-                            </div>
-                            <div class="col-md-6 card-button">
-                                <a href=""
-                                ><div class="card-button-inner wish-button">
-                                    Wishlist
-                                </div></a
-                                >
-                            </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="dress-card">
-                        <div class="dress-card-head">
-                            <img
-                            class="dress-card-img-top"
-                            src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/6625378/2018/6/5/fcec8d8e-4253-4fa4-ae6e-c6805b3b8fd31528183265021-na-2331528183264786-1.jpg"
-                            alt=""
-                            />
-                            <div class="surprise-bubble">
-                            <span class="dress-card-heart">
-                                <i class="fas fa-heart"></i> </span
-                            ><a href="#"> <span>More</span></a>
-                            </div>
-                        </div>
-                        <div class="dress-card-body">
-                            <h4 class="dress-card-title">Harpa</h4>
-                            <p class="dress-card-para">Womans printed clothing</p>
-                            <p class="dress-card-para">
-                            <span class="dress-card-price">Rs.839 &ensp;</span
-                            ><span class="dress-card-crossed">Rs.2099</span
-                            ><span class="dress-card-off">&ensp;(60% OFF)</span>
-                            </p>
-                            <div class="row">
-                            <div class="col-md-6 card-button">
-                                <a href=""
-                                ><div class="card-button-inner bag-button">
-                                    Add to Cart
-                                </div></a
-                                >
-                            </div>
-                            <div class="col-md-6 card-button">
-                                <a href=""
-                                ><div class="card-button-inner wish-button">
-                                    Whishlist
-                                </div></a
-                                >
-                            </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="dress-card">
-                        <div class="dress-card-head">
-                            <img
-                            class="dress-card-img-top"
-                            src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7578929/2018/10/23/86988cdc-cbe3-4b13-93f9-b37ad571b4761540274855321-Harpa-Women-Dresses-9171540274855158-1.jpg"
-                            alt=""
-                            />
-                            <div class="surprise-bubble">
-                            <span class="dress-card-heart">
-                                <i class="fas fa-heart"></i> </span
-                            ><a href="#"> <span>More</span></a>
-                            </div>
-                        </div>
-                        <div class="dress-card-body">
-                            <h4 class="dress-card-title">Harpa</h4>
-                            <p class="dress-card-para">Womans printed clothing</p>
-                            <p class="dress-card-para">
-                            <span class="dress-card-price">Rs.839 &ensp;</span
-                            ><span class="dress-card-crossed">Rs.2099</span
-                            ><span class="dress-card-off">&ensp;(60% OFF)</span>
-                            </p>
-                            <div class="row">
-                            <div class="col-md-6 card-button">
-                                <a href=""
-                                ><div class="card-button-inner bag-button">
-                                    Add to Cart
-                                </div></a
-                                >
-                            </div>
-                            <div class="col-md-6 card-button">
-                                <a href=""
-                                ><div class="card-button-inner wish-button">
-                                    Wishlist
-                                </div></a
-                                >
-                            </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="dress-card">
-                        <div class="dress-card-head">
-                            <img
-                            class="dress-card-img-top"
-                            src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7578940/2018/10/23/fe701151-69e6-4e20-9e2a-ace63081a8e11540282217137-Harpa-Women-Dresses-191540282216937-5.jpg"
-                            alt=""
-                            />
-                            <div class="surprise-bubble">
-                            <span class="dress-card-heart">
-                                <i class="fas fa-heart"></i> </span
-                            ><a href="#"> <span>More</span></a>
-                            </div>
-                        </div>
-                        <div class="dress-card-body">
-                            <h4 class="dress-card-title">Harpa</h4>
-                            <p class="dress-card-para">Womans printed clothing</p>
-                            <p class="dress-card-para">
-                            <span class="dress-card-price">Rs.839 &ensp;</span
-                            ><span class="dress-card-crossed">Rs.2099</span
-                            ><span class="dress-card-off">&ensp;(60% OFF)</span>
-                            </p>
-                            <div class="row">
-                            <div class="col-md-6 card-button">
-                                <a href=""
-                                ><div class="card-button-inner bag-button">
-                                    Add to Cart
-                                </div></a
-                                >
-                            </div>
-                            <div class="col-md-6 card-button">
-                                <a href=""
-                                ><div class="card-button-inner wish-button">
-                                    Wishlist
-                                </div></a
-                                >
-                            </div>
-                            </div>
-                        </div>
-                        </div>
+
+                        <a class="carousel-control-prev product-card-carousel-control-prev" href="#product-card-carousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next product-card-carousel-control-next" href="#product-card-carousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+
                     </div>
                 </div>
             </div>
@@ -337,6 +565,10 @@
                                 from traditional to modern, to suit every bride's preferences. Our dresses are made with high-quality 
                                 materials and are crafted with intricate details to ensure that every bride looks and feels her best on her special day.
                             </p>
+
+                            <a href="#" class="read-more-link">
+                                Read more
+                            </a>
                         </div>
                     </div>
                 </div>

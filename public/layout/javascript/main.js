@@ -1,7 +1,29 @@
 // Page Bindings (This will Execute after Page Load)
 $(function ()
 {
+<<<<<<< HEAD
     $('.redirect-to-products').click(RedirectToProducts);
+=======
+    let currentIndex = 0;
+    
+    $("#product-card-carousel").carousel( { interval: false } );
+    $('.redirect-to-products').click(RedirectToProducts);
+    currentIndex = showProductCards(0);
+    $('.product-card-carousel-control-next').on('click', function () { currentIndex = showNextProductCards(currentIndex); });
+    $('.product-card-carousel-control-prev').on('click', function () { currentIndex = showPreviousProductCards(currentIndex); });
+
+    $("#product-card-carousel").swipe(
+    {
+        swipeLeft: function () 
+        {
+            currentIndex = showNextProductCards(currentIndex);
+        },
+        swipeRight: function () 
+        {
+            currentIndex = showPreviousProductCards(currentIndex);
+        }
+    });
+>>>>>>> b899407 (Local changes: Commit 1)
     
     const productImages = document.querySelectorAll(".product-images img"); // selecting all image thumbs
     const productImageSlide = document.querySelector(".image-slider"); // seclecting image slider element
@@ -83,4 +105,87 @@ function RedirectToProducts(event)
     {
         console.error('Error:', error);
     });
+<<<<<<< HEAD
+=======
+}
+
+function showProductCards(currentIndex) 
+{
+    const screenWidth = $(window).width();
+
+    let cardsToShow = 1;
+    if (screenWidth >= 768 && screenWidth < 992) 
+    {
+        cardsToShow = 3;
+    } 
+    else if (screenWidth >= 992) 
+    {
+        cardsToShow = 4;
+    }
+
+    const productCards = $("#product-card-carousel .carousel-inner .product-card");
+    const totalCards = productCards.length;
+    productCards.hide();
+    
+    for (let i = 0; i < cardsToShow; i++) 
+    {
+        const nextIndex = (currentIndex + i) % totalCards;
+        productCards.eq(nextIndex).show();
+    }
+    
+    currentIndex = (currentIndex + cardsToShow) % totalCards;
+
+    return currentIndex;
+}
+
+function showNextProductCards(currentIndex) 
+{
+    const screenWidth = $(window).width();
+
+    let cardsToShow = 1;
+    if (screenWidth >= 768 && screenWidth < 992) {
+        cardsToShow = 3;
+    } else if (screenWidth >= 992) {
+        cardsToShow = 4;
+    }
+
+    const productCards = $("#product-card-carousel .carousel-inner .product-card");
+    const totalCards = productCards.length;
+    productCards.hide();
+
+    for (let i = 0; i < cardsToShow; i++) 
+    {
+        const nextIndex = (currentIndex + i) % totalCards;
+        productCards.eq(nextIndex).show();
+    }
+
+    currentIndex = (currentIndex + cardsToShow) % totalCards;
+
+    return currentIndex;
+}
+
+function showPreviousProductCards(currentIndex) {
+    const screenWidth = $(window).width();
+
+    let cardsToShow = 1;
+    if (screenWidth >= 768 && screenWidth < 992) {
+        cardsToShow = 3;
+    } else if (screenWidth >= 992) {
+        cardsToShow = 4;
+    }
+
+    const productCards = $("#product-card-carousel .carousel-inner .product-card");
+    const totalCards = productCards.length;
+    productCards.hide();
+
+    // Calculate the index of the first product to show based on the current index
+    currentIndex = (currentIndex - cardsToShow + totalCards) % totalCards;
+
+    for (let i = 0; i < cardsToShow; i++) {
+        const prevIndex = (currentIndex + i) % totalCards;
+        productCards.eq(prevIndex).show();
+    }
+
+    return currentIndex;
+>>>>>>> b899407 (Local changes: Commit 1)
 }
