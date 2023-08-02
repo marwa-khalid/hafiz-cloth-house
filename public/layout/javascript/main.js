@@ -1,9 +1,6 @@
 // Page Bindings (This will Execute after Page Load)
 $(function ()
 {
-<<<<<<< HEAD
-    $('.redirect-to-products').click(RedirectToProducts);
-=======
     let currentIndex = 0;
     
     $("#product-card-carousel").carousel( { interval: false } );
@@ -23,7 +20,6 @@ $(function ()
             currentIndex = showPreviousProductCards(currentIndex);
         }
     });
->>>>>>> b899407 (Local changes: Commit 1)
     
     const productImages = document.querySelectorAll(".product-images img"); // selecting all image thumbs
     const productImageSlide = document.querySelector(".image-slider"); // seclecting image slider element
@@ -105,8 +101,6 @@ function RedirectToProducts(event)
     {
         console.error('Error:', error);
     });
-<<<<<<< HEAD
-=======
 }
 
 function showProductCards(currentIndex) 
@@ -187,5 +181,4 @@ function showPreviousProductCards(currentIndex) {
     }
 
     return currentIndex;
->>>>>>> b899407 (Local changes: Commit 1)
 }

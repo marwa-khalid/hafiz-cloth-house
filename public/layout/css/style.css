@@ -11,60 +11,7 @@ body {
   a {
     font-family: 'Consolas'
 }
-<<<<<<< HEAD
-                                                       /* navbar */
-    .navbar {
-      background-color: #f5f5f5;
-      padding: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
 
-    .navbar img {
-      height: auto;
-      max-width: 125px;
-      vertical-align: middle;
-    }
-
-    .icons i {
-      font-size: 20px;
-      color: rgb(24, 24, 119);
-      margin-right: 10px;
-      cursor: pointer;
-      transition: color 0.2s ease-in-out;
-    }
-
-    .icons i:hover {
-      color:  #408de4 ;
-    }
-
-    .navbar-nav .nav-item .nav-link {
-      color: rgb(24, 24, 119);
-      font-weight: bold;
-      transition: color 0.2s ease-in-out;
-    }
-
-    .navbar-nav .nav-item .nav-link:hover {
-      color:  #408de4 ;
-    }
-
-    .navbar-nav .dropdown .nav-link {
-      cursor: pointer;
-      font-size: 18px;
-    }
-    .dropdown-menu .dropdown-item {
-      font-size: 16px;
-      color: #333;
-      transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-    }
-
-    .dropdown-menu .dropdown-item:hover {
-      color: #fff;
-      background-color: rgb(24, 24, 119);
-    }
-=======
 /* navbar */
 .navbar 
 {
@@ -128,7 +75,6 @@ body {
     background-color: rgb(24, 24, 119);
 }
 
->>>>>>> b899407 (Local changes: Commit 1)
 #footer-copyright-div, #forget-password-div
 {
     background-color: rgba(0,0,0,0.2);
@@ -155,17 +101,6 @@ body {
 @keyframes description-site-introduction-animation 
 {
     from 
-<<<<<<< HEAD
-{
-        left: -300px;
-        opacity: 0;
-  } 
-    to 
-{
-        left: 0;
-        opacity: 1;
-  }
-=======
     {
         left: -300px;
         opacity: 0;
@@ -175,7 +110,6 @@ body {
         left: 0;
         opacity: 1;
     }
->>>>>>> b899407 (Local changes: Commit 1)
 }
 
 .fade-up-animator
@@ -192,17 +126,6 @@ body {
 @keyframes fade-up-animation
 {
     from 
-<<<<<<< HEAD
-{
-        bottom: -300px;
-        opacity: 0;
-  } 
-    to 
-{
-        bottom: 0;
-        opacity: 1
-  }
-=======
     {
         bottom: -300px;
         opacity: 0;
@@ -212,7 +135,6 @@ body {
         bottom: 0;
         opacity: 1
     }
->>>>>>> b899407 (Local changes: Commit 1)
 }
 
 .hover-effect
@@ -237,13 +159,8 @@ body {
     transform: scale(1.1);
 }
 
-<<<<<<< HEAD
-                                                   /* homepage */
-.carousel 
-=======
 /* homepage */
 .page-top-carousel 
->>>>>>> b899407 (Local changes: Commit 1)
 {
     max-width: 800px; /* Adjust this value to your desired width */
     margin: 0 auto; /* Center the carousel */
@@ -251,17 +168,10 @@ body {
 
 #body-container 
 {
-<<<<<<< HEAD
-   background: linear-gradient(135deg, #ffffff, #c4c0c0);
-}
-
-.carousel-item img 
-=======
     background: linear-gradient(135deg, #ffffff, #c4c0c0);
 }
 
 .page-top-carousel-item img 
->>>>>>> b899407 (Local changes: Commit 1)
 {
     height: 300px; /* Adjust this value to your desired height */
     object-fit: contain; /* Maintain image aspect ratio */
@@ -330,10 +240,7 @@ body {
     padding: 1rem;
     background: #fff;
     border-radius: 0 0 7px 7px;
-<<<<<<< HEAD
-=======
     white-space: nowrap;
->>>>>>> b899407 (Local changes: Commit 1)
 }
 
 .dress-card-title 
@@ -369,10 +276,7 @@ body {
 .dress-card  
 {
     border-radius: 14px;
-<<<<<<< HEAD
-=======
     overflow: hidden;
->>>>>>> b899407 (Local changes: Commit 1)
 }
   
 .dress-card-heart 
@@ -482,13 +386,8 @@ body {
 .read-more-link 
 {
     position: absolute;
-<<<<<<< HEAD
-    padding: 10px 5px;
-    margin-top: 15px;
-=======
     padding: 4% 2%;
     margin-top: 1%;
->>>>>>> b899407 (Local changes: Commit 1)
     left: 40%; /* Set the left position to 50% */
     transform: translateX(-50%); /* Center the link horizontally */
     color: rgb(24, 24, 119);
@@ -496,10 +395,6 @@ body {
     font-weight: bold;
     font-size: large;
     text-transform: uppercase;
-<<<<<<< HEAD
-    
-=======
->>>>>>> b899407 (Local changes: Commit 1)
     opacity: 0;
     transition: opacity 0.3s, transform 0.3s; /* Add a transition for fading and sliding */
 }
@@ -511,8 +406,6 @@ body {
     transform: translateX(0);
 }
 
-<<<<<<< HEAD
-=======
 @media (max-width: 992px) {
     .read-more-link
     {
@@ -523,7 +416,6 @@ body {
     }
 }
 
->>>>>>> b899407 (Local changes: Commit 1)
 
 .category-img
 {
@@ -606,68 +498,39 @@ body {
 }
 
 .details .product-brand
-{   
-   
+{
     text-transform: capitalize;
-<<<<<<< HEAD
     font-size: 25px;
-=======
-    font-size: 30px;
->>>>>>> b899407 (Local changes: Commit 1)
-    font-weight: bold;
-    
+    font-weight: bold;   
 }
 
 .product-price
 {
     font-weight: 700;
-<<<<<<< HEAD
     font-size: 25px;
-=======
-    font-size: 30px;
->>>>>>> b899407 (Local changes: Commit 1)
     color: rgb(24, 24, 119);
 }
 
 .product-actual-price
 {
-<<<<<<< HEAD
     font-size: 25px;
-=======
-    font-size: 30px;
->>>>>>> b899407 (Local changes: Commit 1)
     opacity: 0.5;
     text-decoration: line-through;
     margin: 0 20px;
     font-weight: 300;
 }
-<<<<<<< HEAD
-.together-button {
-    display:flex;
-}
-=======
 
 .together-button 
 {
     display:flex;
 }
 
->>>>>>> b899407 (Local changes: Commit 1)
 .product-discount
 {
     color: rgb(24, 24, 119);
     font-size: 20px;
     font-weight: bold;
 }
-<<<<<<< HEAD
-.details {
-    vertical-align: top;
-  }
-
-.product-sub-heading
-{
-    font-size: 25px;
-=======
 
 .details 
 {
@@ -676,15 +539,12 @@ body {
 
 .product-sub-heading
 {
-    font-size: 30px;
->>>>>>> b899407 (Local changes: Commit 1)
+    font-size: 25px;
     text-transform: uppercase;
     margin: 60px 0 10px;
     font-weight: 300;
 }
 
-<<<<<<< HEAD
-=======
 .size-radio-btn
 {
     display: inline-block;
@@ -721,17 +581,13 @@ body {
     margin: 20px 0;
     text-transform: capitalize;
 }
->>>>>>> b899407 (Local changes: Commit 1)
 
 .cart-btn
 {
     margin-right: 2%;
     background: rgb(24, 24, 119);
     color: #fff;
-<<<<<<< HEAD
     text-transform: capitalize;
-=======
->>>>>>> b899407 (Local changes: Commit 1)
 }
 
 .img-lg-height 
@@ -755,11 +611,7 @@ body {
 
 .heading
 {
-<<<<<<< HEAD
     font-size: 25px;
-=======
-    font-size: 30px;
->>>>>>> b899407 (Local changes: Commit 1)
     margin-bottom: 20px;
 }
 
@@ -881,13 +733,15 @@ footer
     background-color: rgb(24, 24, 119); /* Blue color */
     color: white; /* White color */
 }
-<<<<<<< HEAD
-                                    /* AboutUs Page */
+
+/* AboutUs Page */
 .AboutUsHeading
 {
    font-weight: bold;
 }
-.full-width-img {
+
+.full-width-img 
+{
     margin: 0; /* Remove default Bootstrap margins */
     padding: 0; /* Remove default Bootstrap padding */
     width: 100vw; /* Set the image width to cover the full viewport width */
@@ -896,27 +750,34 @@ footer
     transform: translateX(-50%); /* Translate the image back by 50% of its own width */
     height: 30rem;
 }
+
 .center-text
 {
     font-size: 16px;
     font-weight: 300;
     line-height: 1.6;
 }
-.zoom-image {
+
+.zoom-image 
+{
     width: 400px;
     transition: transform 0.3s ease; /* CSS transition for smooth animation */
 }
 
 /* Add animation on hover */
-.zoom-image:hover {
+.zoom-image:hover 
+{
     transform: scale(1.1); /* Zoom-in effect, 1.1 is the scaling factor */
 }
                       /* View Cart CSS */
 
-.HeadingOfCart{
+.HeadingOfCart
+{
     margin-bottom: 5vh;
 }
-.viewcard{
+
+.viewcard
+{
     margin: auto;
     max-width: 950px;
     width: 90%;
@@ -924,80 +785,121 @@ footer
     border-radius: 1rem;
     border: transparent;
 }
-@media(max-width:767px){
-    .card{
+
+@media(max-width:767px)
+{
+    .card
+    {
         margin: 3vh auto;
     }
 }
-.shopcart{
+
+.shopcart
+{
     background-color: #fff;
     padding: 4vh 5vh;
     border-bottom-left-radius: 1rem;
     border-top-left-radius: 1rem;
 }
-@media(max-width:767px){
-    .cart{
+
+@media(max-width:767px)
+{
+    .cart
+    {
         padding: 4vh;
         border-bottom-left-radius: unset;
         border-top-right-radius: 1rem;
     }
 }
-.summary{
+
+.summary
+{
     background-color: #ddd;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
     padding: 4vh;
     color: rgb(65, 65, 65);
 }
-@media(max-width:767px){
-    .summary{
-    border-top-right-radius: unset;
-    border-bottom-left-radius: 1rem;
+
+@media(max-width:767px)
+{
+    .summary
+    {
+        border-top-right-radius: unset;
+        border-bottom-left-radius: 1rem;
     }
 }
-.summary .col-2{
+
+.summary .col-2
+{
     padding: 0;
 }
+
 .summary .col-10
 {
     padding: 0;
-}.row{
+}
+
+.row
+{
     margin: 0;
 }
-.HeadingOfCart b{
+
+.HeadingOfCart b
+{
     font-size: 1.5rem;
 }
-.main{
+
+.main
+{
     margin: 0;
     padding: 2vh 0;
     width: 100%;
 }
-.col-2, .colcart{
+
+.col-2, .colcart
+{
     padding: 0 1vh;
 }
-.colcart a{
+
+.colcart a
+{
     padding: 0 1vh;
 }
-.close{
+
+.close
+{
     margin-left: auto;
     font-size: 0.7rem;
 }
-img{
+
+img
+{
     width: 3.5rem;
 }
-.back-to-shop{
+
+.back-to-shop
+{
     margin-top: 4.5rem;
 }
-h5{
+
+h5
+{
     margin-top: 4vh;
 }
-hr{
+
+hr
+{
     margin-top: 1.25rem;
 }
-form{
+
+form
+{
     padding: 2vh 0;
 }
-select{
+
+select
+{
     border: 1px solid rgba(0, 0, 0, 0.137);
     padding: 1.5vh 1vh;
     margin-bottom: 4vh;
@@ -1005,7 +907,9 @@ select{
     width: 100%;
     background-color: rgb(247, 247, 247);
 }
-input{
+
+input
+{
     border: 1px solid rgba(0, 0, 0, 0.137);
     padding: 1vh;
     margin-bottom: 4vh;
@@ -1013,11 +917,14 @@ input{
     width: 100%;
     background-color: rgb(247, 247, 247);
 }
+
 input:focus::-webkit-input-placeholder
 {
       color:transparent;
 }
-.cartbtn{
+
+.cartbtn
+{
     background-color: rgb(24, 24, 119);
     border-color: rgb(24, 24, 119);
     color: white;
@@ -1030,7 +937,9 @@ input:focus::-webkit-input-placeholder
     text-transform: capitalize;
     font-family: 'Consolas';
 }
-.cartbtn:focus{
+
+.cartbtn:focus
+{
     box-shadow: none;
     outline: none;
     box-shadow: none;
@@ -1038,26 +947,33 @@ input:focus::-webkit-input-placeholder
     -webkit-box-shadow: none;
     transition: none; 
 }
-.btn:hover{
+
+.btn:hover
+{
     color: white;
 }
-a{
+
+a
+{
     color: black; 
 }
-a:hover{
+
+a:hover
+{
     color: black;
     text-decoration: none;
 }
- #code{
+
+#code
+{
     background-image: linear-gradient(to left, rgba(255, 255, 255, 0.253) , rgba(255, 255, 255, 0.185)), url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
     background-repeat: no-repeat;
     background-position-x: 95%;
     background-position-y: center;
 }
 
-
-
-.summary1{
+.summary1
+{
     background-color: #ddd;
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 1rem;
@@ -1065,10 +981,11 @@ a:hover{
     color: rgb(65, 65, 65);
   
 }
-.summary1 ul {
+
+.summary1 ul 
+{
     margin: 0;
-  }
-=======
+}
 
 .navbar-toggler.custom-toggler .navbar-toggler-icon span 
 {
@@ -1106,4 +1023,3 @@ a:hover{
     background-color: transparent !important;
     border-color: transparent;
 }
->>>>>>> b899407 (Local changes: Commit 1)
