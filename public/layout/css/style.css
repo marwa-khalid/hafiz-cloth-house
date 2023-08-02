@@ -156,7 +156,7 @@ body {
 
 #body-container 
 {
-    background: linear-gradient(135deg, #ffffff, #c4c0c0);
+   background: linear-gradient(135deg, #ffffff, #c4c0c0);
 }
 
 .carousel-item img 
@@ -478,7 +478,7 @@ body {
 {   
    
     text-transform: capitalize;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     
 }
@@ -486,13 +486,13 @@ body {
 .product-price
 {
     font-weight: 700;
-    font-size: 30px;
+    font-size: 25px;
     color: rgb(24, 24, 119);
 }
 
 .product-actual-price
 {
-    font-size: 30px;
+    font-size: 25px;
     opacity: 0.5;
     text-decoration: line-through;
     margin: 0 20px;
@@ -513,54 +513,19 @@ body {
 
 .product-sub-heading
 {
-    font-size: 30px;
+    font-size: 25px;
     text-transform: uppercase;
     margin: 60px 0 10px;
     font-weight: 300;
 }
 
-.size-radio-btn
-{
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-    text-align: center;
-    font-size: 20px;
-    border: 1px solid #383838;
-    border-radius: 50%;
-    margin: 10px;
-    margin-left: 0;
-    line-height: 80px;
-    text-transform: uppercase;
-    color: #383838;
-    cursor: pointer;
-}
-
-.size-radio-btn.check
-{
-    background: #383838;
-    color: #fff;
-}
-
-.product-intro-button
-{
-    width: 28%;
-    padding: 7px;
-    border-radius: 5px;
-    background: none;
-    border: 1px solid rgb(24, 24, 119);
-    color: rgb(24, 24, 119);
-    font-size: 20px;
-    cursor: pointer;
-    margin: 20px 0;
-    text-transform: capitalize;
-}
 
 .cart-btn
 {
     margin-right: 2%;
     background: rgb(24, 24, 119);
     color: #fff;
+    text-transform: capitalize;
 }
 
 .img-lg-height 
@@ -584,7 +549,7 @@ body {
 
 .heading
 {
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom: 20px;
 }
 
@@ -706,3 +671,189 @@ footer
     background-color: rgb(24, 24, 119); /* Blue color */
     color: white; /* White color */
 }
+                                    /* AboutUs Page */
+.AboutUsHeading
+{
+   font-weight: bold;
+}
+.full-width-img {
+    margin: 0; /* Remove default Bootstrap margins */
+    padding: 0; /* Remove default Bootstrap padding */
+    width: 100vw; /* Set the image width to cover the full viewport width */
+    position: relative; /* Add a relative position to allow overflow */
+    left: 50%; /* Move the image to the left by 50% of its container width */
+    transform: translateX(-50%); /* Translate the image back by 50% of its own width */
+    height: 30rem;
+}
+.center-text
+{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+.zoom-image {
+    width: 400px;
+    transition: transform 0.3s ease; /* CSS transition for smooth animation */
+}
+
+/* Add animation on hover */
+.zoom-image:hover {
+    transform: scale(1.1); /* Zoom-in effect, 1.1 is the scaling factor */
+}
+                      /* View Cart CSS */
+
+.HeadingOfCart{
+    margin-bottom: 5vh;
+}
+.viewcard{
+    margin: auto;
+    max-width: 950px;
+    width: 90%;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1rem;
+    border: transparent;
+}
+@media(max-width:767px){
+    .card{
+        margin: 3vh auto;
+    }
+}
+.shopcart{
+    background-color: #fff;
+    padding: 4vh 5vh;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+@media(max-width:767px){
+    .cart{
+        padding: 4vh;
+        border-bottom-left-radius: unset;
+        border-top-right-radius: 1rem;
+    }
+}
+.summary{
+    background-color: #ddd;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 4vh;
+    color: rgb(65, 65, 65);
+}
+@media(max-width:767px){
+    .summary{
+    border-top-right-radius: unset;
+    border-bottom-left-radius: 1rem;
+    }
+}
+.summary .col-2{
+    padding: 0;
+}
+.summary .col-10
+{
+    padding: 0;
+}.row{
+    margin: 0;
+}
+.HeadingOfCart b{
+    font-size: 1.5rem;
+}
+.main{
+    margin: 0;
+    padding: 2vh 0;
+    width: 100%;
+}
+.col-2, .colcart{
+    padding: 0 1vh;
+}
+.colcart a{
+    padding: 0 1vh;
+}
+.close{
+    margin-left: auto;
+    font-size: 0.7rem;
+}
+img{
+    width: 3.5rem;
+}
+.back-to-shop{
+    margin-top: 4.5rem;
+}
+h5{
+    margin-top: 4vh;
+}
+hr{
+    margin-top: 1.25rem;
+}
+form{
+    padding: 2vh 0;
+}
+select{
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1.5vh 1vh;
+    margin-bottom: 4vh;
+    outline: none;
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+}
+input{
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1vh;
+    margin-bottom: 4vh;
+    outline: none;
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+}
+input:focus::-webkit-input-placeholder
+{
+      color:transparent;
+}
+.cartbtn{
+    background-color: rgb(24, 24, 119);
+    border-color: rgb(24, 24, 119);
+    color: white;
+    width: 100%;
+    font-size: 0.7rem;
+    margin-top: 4vh;
+    padding: 1vh;
+    border-radius: 0;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-family: 'Consolas';
+}
+.cartbtn:focus{
+    box-shadow: none;
+    outline: none;
+    box-shadow: none;
+    color: white;
+    -webkit-box-shadow: none;
+    transition: none; 
+}
+.btn:hover{
+    color: white;
+}
+a{
+    color: black; 
+}
+a:hover{
+    color: black;
+    text-decoration: none;
+}
+ #code{
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.253) , rgba(255, 255, 255, 0.185)), url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: center;
+}
+
+
+
+.summary1{
+    background-color: #ddd;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 1rem;
+    padding: 4vh;
+    color: rgb(65, 65, 65);
+  
+}
+.summary1 ul {
+    margin: 0;
+  }

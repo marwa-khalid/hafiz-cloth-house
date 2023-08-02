@@ -1,0 +1,279 @@
+<html lang="en">
+    <head>
+        <title>
+            Hafiz Cloth House
+        </title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <%- include("./Components/ImportCssFiles"); %>
+    </head>
+    <body>
+        <!-- Embed NavBar Component -->
+        <%
+            var NavBarData = { "SignedIn": false, "UserType": '' };
+        %>
+        <%- include("./Components/NavBar", { NavBarData: NavBarData }); %>
+
+        <!-- Embed Breadcrumb Component -->
+        <%
+            var BreadcrumbData = [
+                                    {
+                                        "PageName": "Home",
+                                    }
+                                ];
+        %>
+        <%- include("./Components/Breadcrumb", {BreadcrumbData: BreadcrumbData}); %>
+
+    <div class="container-fluid p-0 ">
+        <img src="./images/Getty.jpeg" class="img-fluid full-width-img" alt="Full-width picture">
+    </div>
+    <div class="container-fluid" id="body-container">
+    <div class="text-center pt-4">
+        <h2 class="AboutUsHeading">About Us</h2>
+    </div>
+    <div class="container text-center py-4 fw-bold">
+        <div class="center-text">
+            
+<p>Hafizclothhouse is your ultimate destination for premium-quality 
+unstitched fabrics catering to both men and women. Our collection
+ also includes an extensive range of exquisite bridal and formal dresses,
+  as well as trendy two-piece outfits.</p>
+
+<p>Our bridal dresses are thoughtfully designed with elegance and style as top
+ priorities. We offer a diverse selection of designs, ranging from traditional
+  to contemporary, to perfectly match the preferences of every bride. Crafted 
+  with meticulous attention to detail and using high-quality materials, our dresses
+   ensure that every bride exudes confidence and beauty on her special day.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="container-fluid About-us">
+            <!-- On Large Screens -->
+            <div class="row d-none d-lg-flex">
+                <div class="col-md-5 about-section">
+                    <div class="text-center py-5">
+                        <h2>
+                          QUALITY
+                        </h2>
+                    
+                    <p>
+                        We take pride in offering only the highest quality fabrics and clothing at
+                         Hafizclothhouse. Our products are made from the finest materials and are 
+                         designed to last.
+
+                    </p>
+                    </div>
+                </div>
+    
+                <div class="col-md-7 d-flex align-items-center">
+                    <img src="./images/Getty.jpeg" alt="Image from Google" class="w-100 zoom-image">
+                </div>
+            </div>
+        
+            <!-- On Medium and Small Screens -->
+            <div class="row d-md-flex d-lg-none">
+        
+                <div class="col-md-10 mx-auto py-3">
+                    <img src="./images/Getty.jpeg" alt="Image from Google" class="img-fluid img-md-height d-block mx-auto zoom-image">
+                </div>
+                <div class="col-md-12 text-center">
+                    <h2>
+                      QUALITY
+                    </h2>
+                </div>
+        
+                <div class="col-md-12 text-align text-center py-3 fw-bold">
+                    <p>
+                        We take pride in offering only the highest quality fabrics and clothing at
+                        Hafizclothhouse. Our products are made from the finest materials and are 
+                        designed to last.
+                    </p>
+                </div>
+            </div>
+            <!-- On Large Screens -->
+            <div class="row d-none d-lg-flex">
+                <div class="col-md-7 d-flex align-items-center py-3">
+                    <img src="./images/Getty.jpeg" alt="Image from Google" class="w-100 zoom-image">
+                </div>
+                <div class="col-md-5 about-section">
+                    <div class="text-center py-5">
+                        <h2>
+                            WIDE RANGE OF SELECTION
+                        </h2>
+                    
+                    <p>
+                        We have a wide range of brands available for every item at Hafizclothhouse.
+                         You'll be sure to find the perfect brand to suit your preferences.
+
+                    </p>
+                   
+                    </div>
+                </div>
+    
+            </div>
+           <!-- On Medium and Small Screens -->
+            <div class="row d-md-flex d-lg-none">
+
+    <div class="col-md-10 mx-auto">
+        <img src="./images/Getty.jpeg" alt="Image from Google" class="img-fluid img-md-height d-block mx-auto zoom-image">
+    </div>
+    <div class="col-md-12 text-center py-3">
+        <h2 style=" font-size: x-large;">
+          WIDE RANGE OF SELECTION
+        </h2>
+    </div>
+
+    <div class="col-md-12 text-align text-center py-1 fw-bold">
+        <p>
+            We have a wide range of brands available for every item at Hafizclothhouse.
+            You'll be sure to find the perfect brand to suit your preferences.
+        </p>
+    
+    </div>
+            </div>
+             <!-- On Large Screens -->
+             <div class="row d-none d-lg-flex">
+                <div class="col-md-5 about-section">
+                    <div class="text-center py-5">
+                        <h2>
+                         COMFORT
+                        </h2>
+                    
+                    <p>
+                        Our top priority is ensuring that our customers feel comfortable 
+                        in their clothing. That's why we offer a wide range of fabrics that 
+                        are soft, breathable, and comfortable to wear.
+
+
+                    </p>
+                    </div>
+                </div>
+    
+                <div class="col-md-7 d-flex align-items-center">
+                    <img src="./images/Getty.jpeg" alt="Image from Google" class="w-100 zoom-image">
+                </div>
+            </div>
+        
+            <!-- On Medium and Small Screens -->
+            <div class="row d-md-flex d-lg-none">
+        
+                <div class="col-md-10 mx-auto py-3">
+                    <img src="./images/Getty.jpeg" alt="Image from Google" class="img-fluid img-md-height d-block mx-auto zoom-image">
+                </div>
+                <div class="col-md-12 text-center">
+                    <h2>
+                     COMFORT
+                    </h2>
+                </div>
+        
+                <div class="col-md-12 text-align text-center py-3 fw-bold">
+                    <p>
+                        Our top priority is ensuring that our customers feel
+                         comfortable in their clothing. That's why we offer a
+                          wide range of fabrics that are soft, breathable, and
+                           comfortable to wear.
+
+                    </p>
+                </div>
+            </div>
+ <!-- On Large Screens -->
+ <div class="row d-none d-lg-flex">
+    <div class="col-md-7 d-flex align-items-center py-3">
+        <img src="./images/Getty.jpeg" alt="Image from Google" class="w-100 zoom-image">
+    </div>
+    <div class="col-md-5 about-section">
+        <div class="text-center py-5">
+            <h2>
+              VISION
+            </h2>
+        
+        <p>
+            Our brand's vision is to ensure that every customer is satisfied 
+            from the start and feels confident in showcasing their style and 
+            elegance by wearing our clear and stylish clothing
+        </p>
+       
+        </div>
+    </div>
+
+</div>
+<!-- On Medium and Small Screens -->
+<div class="row d-md-flex d-lg-none">
+
+<div class="col-md-10 mx-auto">
+<img src="./images/Getty.jpeg" alt="Image from Google" class="img-fluid img-md-height d-block mx-auto zoom-image">
+</div>
+<div class="col-md-12 text-center py-3">
+<h2>
+VISION
+</h2>
+</div>
+
+<div class="col-md-12 text-align text-center py-1 fw-bold">
+<p>
+    Our brand's vision is to ensure that every customer is satisfied from the start and
+     feels confident in showcasing their style and elegance by wearing our clear and stylish clothing.
+</p>
+
+</div>
+</div>
+ <!-- On Large Screens -->
+ <div class="row d-none d-lg-flex">
+    <div class="col-md-5 about-section">
+        <div class="text-center py-5">
+            <h2>
+              WHY CHOOSE US?
+            </h2>
+        
+        <p>
+            
+"We believe that you will love our brand's unique and exquisite clothing selection. 
+Our goal is to offer our customers a luxurious and tailored clothing experience that 
+appeals to all types of people."
+
+        </p>
+        </div>
+    </div>
+
+    <div class="col-md-7 d-flex align-items-center">
+        <img src="./images/Getty.jpeg" alt="Image from Google" class="w-100 zoom-image">
+    </div>
+</div>
+
+<!-- On Medium and Small Screens -->
+<div class="row d-md-flex d-lg-none">
+
+    <div class="col-md-10 mx-auto py-3">
+        <img src="./images/Getty.jpeg" alt="Image from Google" class="img-fluid img-md-height d-block mx-auto zoom-image">
+    </div>
+    <div class="col-md-12 text-center">
+        <h2>
+        WHY CHOOSE US?
+        </h2>
+    </div>
+
+    <div class="col-md-12 text-align text-center py-3 fw-bold">
+        <p>
+           
+"We believe that you will love our brand's unique and exquisite clothing selection.
+ Our goal is to offer our customers a luxurious and tailored clothing experience that
+  appeals to all types of people."
+        </p>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+
+                <!-- Embed Footer Component -->
+                <%- include("./Components/Footer"); %>
+
+
+                <!-- Optional JavaScript -->
+                <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                <%- include("./Components/ImportJavascriptFiles"); %>
+            </body>
+        </html>
