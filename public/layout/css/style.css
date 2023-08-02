@@ -953,11 +953,6 @@ input:focus::-webkit-input-placeholder
     color: white;
 }
 
-a
-{
-    color: black; 
-}
-
 a:hover
 {
     color: black;
