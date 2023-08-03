@@ -70,37 +70,16 @@ $(function ()
     });
 });
 
-function RedirectToProducts(event) 
+function RedirectToProducts(event)
 {
     event.preventDefault();
 
     currentClickedText = $(event.target).text().trim();
-
-    console.log(currentClickedText);
-
-    const data =    {
-                        "name": currentClickedText
-                    };
-
-    fetch('/products', 
-    {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-    })
-    .then((response) => response.text())
-    .then((response) => 
-    {
-        document.open();
-        document.write(response);
-        document.close();
-    })
-    .catch((error) => 
-    {
-        console.error('Error:', error);
-    });
+    
+    var RedirectToProductsForm = $('<form/>', { action: '/products', method: 'post', style: 'display:none;' });
+    RedirectToProductsForm.append($('<input/>', { type: 'hidden', name: 'categoryName', value: currentClickedText }));
+    $('body').append(RedirectToProductsForm);
+    RedirectToProductsForm.submit();
 }
 
 function showProductCards(currentIndex) 

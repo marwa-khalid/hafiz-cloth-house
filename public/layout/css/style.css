@@ -953,7 +953,7 @@ input:focus::-webkit-input-placeholder
     color: white;
 }
 
-a:hover
+.read-more-link:hover
 {
     color: black;
     text-decoration: none;
