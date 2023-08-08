@@ -108,11 +108,16 @@ function showProductCards(currentIndex)
     const screenWidth = $(window).width();
 
     let cardsToShow = 1;
+    
     if (screenWidth >= 768 && screenWidth < 992) 
     {
-        cardsToShow = 3;
+        cardsToShow = 2;
     } 
-    else if (screenWidth >= 992) 
+    else if (screenWidth >= 992 && screenWidth < 1200) 
+    {
+        cardsToShow = 3;
+    }
+    else if (screenWidth >= 1200) 
     {
         cardsToShow = 4;
     }
