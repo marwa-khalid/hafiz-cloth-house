@@ -10,7 +10,9 @@ body {
   
   a {
     font-family: 'Consolas'
+
 }
+
 
 /* navbar */
 .navbar 
@@ -160,10 +162,57 @@ body {
 }
 
 /* homepage */
-.page-top-carousel 
-{
-    max-width: 800px; /* Adjust this value to your desired width */
-    margin: 0 auto; /* Center the carousel */
+
+.top-content {
+    width: 100%;
+    padding: 0;
+}
+
+.top-content .carousel-control-prev {
+    border-bottom: 0;
+}
+
+.top-content .carousel-control-next {
+    border-bottom: 0;
+}
+
+.top-content .carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+
+/* Custom CSS of ARROWS*/
+.carousel-control-prev,
+.carousel-control-next {
+  width: 30px; /* Adjust the width as needed */
+  height: 30px; /* Adjust the height as needed */
+
+  opacity: 0.5; /* Optional: Set the initial opacity for the controls */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Adjust the positioning of the controls for different screen sizes */
+@media (max-width: 767.98px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 20px; /* Adjust the width for smaller screens */
+    height: 20px; /* Adjust the height for smaller screens */
+  }
+}
+
+/* Optional: Add some extra spacing between the controls and cards */
+/* Adjust the margin value as needed */
+.carousel-control-prev {
+  margin-left: -10px; /* Negative margin to shift left */
+}
+
+.carousel-control-next {
+  margin-right: -10px; /* Negative margin to shift right */
 }
 
 #body-container 
@@ -171,10 +220,45 @@ body {
     background: linear-gradient(135deg, #ffffff, #c4c0c0);
 }
 
-.page-top-carousel-item img 
+.page-top-carousel-item
 {
-    height: 300px; /* Adjust this value to your desired height */
-    object-fit: contain; /* Maintain image aspect ratio */
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+@media (max-width: 992px) 
+{
+    .page-top-carousel-item
+    {
+        height: 400px;
+    }
+}
+
+@media (max-width: 576px) 
+{
+    .page-top-carousel-item
+    {
+        height: 300px;
+    }
+}
+
+.video-wrapper 
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    /* transform: scale(1); */
+    transform-origin: top;
+}
+
+.video-wrapper video 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
 }
 
 .category-img 
@@ -209,7 +293,7 @@ body {
     left: 50%; /* Position the text at the horizontal center of the image container */
     transform: translate(-50%, -50%); /* Center the text using a transform */
     background-color: rgba(0, 0, 0, 0.7); /* Add a semi-transparent black background */
-    padding: 40px 20px;
+    padding: 20px 20px;
     border-radius: 5px;
     color: white; /* Set the text color to white */
     display: none; /* Hide the text by default */
@@ -406,7 +490,8 @@ body {
     transform: translateX(0);
 }
 
-@media (max-width: 992px) {
+@media (max-width: 992px) 
+{
     .read-more-link
     {
         opacity: 1;
@@ -416,7 +501,44 @@ body {
     }
 }
 
+/* Style for the dropdown button */
+.dropdown .btn 
+{
+    text-align: right;    
+    top: 50%; /* Center the button vertically */
+    right: 0; /* Position the button on the right side of the container */
+    transform: translateY(-50%)
+}
+  
+/* Style for the dropdown menu */
+.dropdown-menu 
+{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
 
+/* Style for dropdown headers */
+.dropdown-header 
+{
+    font-weight:bolder;
+    font-size: larger;
+    margin-top: 10px;
+    color: rgb(24, 24, 119);
+}
+
+/* Style for the price range input */
+.custom-range 
+{
+    width: 100%;
+}
+
+.form-check-input 
+{
+    margin-left: 1rem; /* Adjust the spacing as needed */
+}
+ 
 .category-img
 {
     max-height: 500px;
@@ -436,7 +558,8 @@ body {
     justify-content: space-between;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) 
+{
     .product-details 
     {
         padding-left: 5rem;
@@ -458,15 +581,19 @@ body {
     margin: 0 auto;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) 
+{
     .image-slider 
     {
         width: 500px;
     }
 }
-.both-buttons {
+
+.both-buttons 
+{
     display: flex;
 }
+
 .product-images
 {
     position: absolute;
@@ -490,6 +617,23 @@ body {
     height: 80px;
     object-fit: cover;
     cursor: pointer;
+}
+
+/* .filter-feature-dropdown-buttons-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+} */
+
+/* .full-width-dropdown 
+{
+    position: initial;
+} */
+
+.filter-feature-dropdown-buttons-container button
+{
+    margin-right: 2%;
 }
 
 .product-images img.active
@@ -605,7 +749,6 @@ body {
 
 .detail-des
 {
-   
     text-transform: capitalize;
 }
 
@@ -618,8 +761,7 @@ body {
 .des
 {
     color: #383838;
-    line-height: 25px;
-    
+    line-height: 25px;   
 }
 
 .line 
@@ -642,7 +784,6 @@ footer
     color: rgb(24, 24, 119); /* Blue color */
     padding-top: 10px; /* Adjust the padding as needed to decrease the height */
     padding-bottom: 10px;
-   
 }
 
 .footer a 

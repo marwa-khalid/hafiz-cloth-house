@@ -9,6 +9,22 @@ $(function ()
     $('.product-card-carousel-control-next').on('click', function () { currentIndex = showNextProductCards(currentIndex); });
     $('.product-card-carousel-control-prev').on('click', function () { currentIndex = showPreviousProductCards(currentIndex); });
 
+    const maxValueForPriceRange = 10000; 
+    $("#priceRange").ionRangeSlider(
+    {
+        skin: "square",
+        type: "double",
+        min: 0,
+        max: maxValueForPriceRange,
+        step: 100,
+        from: 1000,
+        to: 5000,
+        grid: false,
+        prettify_enabled: true,
+        prettify_separator: ",",
+        prefix: "Rs: "
+    });
+
     $("#product-card-carousel").swipe(
     {
         swipeLeft: function () 
