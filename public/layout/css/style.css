@@ -162,21 +162,24 @@ body {
 }
 
 /* homepage */
-
-.top-content {
+.top-content 
+{
     width: 100%;
     padding: 0;
 }
 
-.top-content .carousel-control-prev {
+.top-content .product-card-carousel-control-prev 
+{
     border-bottom: 0;
 }
 
-.top-content .carousel-control-next {
+.top-content .product-card-carousel-control-next 
+{
     border-bottom: 0;
 }
 
-.top-content .carousel-indicators li {
+.top-content .carousel-indicators li 
+{
     width: 15px;
     height: 15px;
     margin-left: 5px;
@@ -186,32 +189,36 @@ body {
 
 
 /* Custom CSS of ARROWS*/
-.carousel-control-prev,
-.carousel-control-next {
-  width: 30px; /* Adjust the width as needed */
-  height: 30px; /* Adjust the height as needed */
-
-  opacity: 0.5; /* Optional: Set the initial opacity for the controls */
-  top: 50%;
-  transform: translateY(-50%);
+.product-card-carousel-control-prev,
+.product-card-carousel-control-next 
+{
+    width: 30px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+    opacity: 0.5; /* Optional: Set the initial opacity for the controls */
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* Adjust the positioning of the controls for different screen sizes */
-@media (max-width: 767.98px) {
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: 20px; /* Adjust the width for smaller screens */
-    height: 20px; /* Adjust the height for smaller screens */
-  }
+@media (max-width: 767.98px) 
+{
+    .product-card-carousel-control-prev,
+    .product-card-carousel-control-next 
+    {
+        width: 20px; /* Adjust the width for smaller screens */
+        height: 20px; /* Adjust the height for smaller screens */
+    }
 }
 
 /* Optional: Add some extra spacing between the controls and cards */
 /* Adjust the margin value as needed */
-.carousel-control-prev {
+.product-card-carousel-control-prev 
+{
   margin-left: -10px; /* Negative margin to shift left */
 }
 
-.carousel-control-next {
+.product-card-carousel-control-next 
+{
   margin-right: -10px; /* Negative margin to shift right */
 }
 
