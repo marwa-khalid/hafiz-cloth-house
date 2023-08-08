@@ -9,6 +9,22 @@ $(function ()
     $('.product-card-carousel-control-next').on('click', function () { currentIndex = showNextProductCards(currentIndex); });
     $('.product-card-carousel-control-prev').on('click', function () { currentIndex = showPreviousProductCards(currentIndex); });
 
+    const maxValueForPriceRange = 10000; 
+    $("#priceRange").ionRangeSlider(
+    {
+        skin: "square",
+        type: "double",
+        min: 0,
+        max: maxValueForPriceRange,
+        step: 100,
+        from: 1000,
+        to: 5000,
+        grid: false,
+        prettify_enabled: true,
+        prettify_separator: ",",
+        prefix: "Rs: "
+    });
+
     $("#product-card-carousel").swipe(
     {
         swipeLeft: function () 
@@ -68,39 +84,23 @@ $(function ()
     {
         $(this).find('.img-subcontent').fadeOut(200);
     });
+
+    $(".filter-feature-dropdown-buttons-container .dropdown").hover(function (event)
+    {
+        event.preventDefault();
+    })
 });
 
-function RedirectToProducts(event) 
+function RedirectToProducts(event)
 {
     event.preventDefault();
 
     currentClickedText = $(event.target).text().trim();
-
-    console.log(currentClickedText);
-
-    const data =    {
-                        "name": currentClickedText
-                    };
-
-    fetch('/products', 
-    {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-    })
-    .then((response) => response.text())
-    .then((response) => 
-    {
-        document.open();
-        document.write(response);
-        document.close();
-    })
-    .catch((error) => 
-    {
-        console.error('Error:', error);
-    });
+    
+    var RedirectToProductsForm = $('<form/>', { action: '/products', method: 'post', style: 'display:none;' });
+    RedirectToProductsForm.append($('<input/>', { type: 'hidden', name: 'categoryName', value: currentClickedText }));
+    $('body').append(RedirectToProductsForm);
+    RedirectToProductsForm.submit();
 }
 
 function showProductCards(currentIndex) 

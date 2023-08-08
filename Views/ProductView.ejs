@@ -21,6 +21,14 @@
             var BreadcrumbData = [
                                     {
                                         "PageName": "Home",
+                                        "PageLink": "/"
+                                    },
+                                    {
+                                        "PageName": "Products",
+                                        "PageLink": "/products"
+                                    },
+                                    {
+                                        "PageName": "Product Detail"
                                     }
                                 ];
         %>
@@ -44,15 +52,15 @@
                         <div class="details">
                             <h2 class="product-brand">calvin klein</h2>
                         
-                            <span class="product-price">$99</span>
-                            <span class="product-actual-price">$200</span>
+                            <span class="product-price">Rs.1000</span>
+                            <span class="product-actual-price">Rs.2000</span>
                             <span class="product-discount">(50% off)</span>
                                   
                         <div class="both-buttons">
-                            <button class="btn cart-btn product-intro-button">add to cart</button>
-                            <button class="btn product-intro-button">add to wishlist</button>
+                            <a href="/ViewCart" class="btn cart-btn cartbtn">ADD TO CART</a>
+                            <a href="/ViewCart" class="btn cart-btn cartbtn">ADD TO WISHLIST</a>
                             </div>
-                        <section class="detail-des">
+                        <section class=" py-3 detail-des">
                             <h2 class="heading">
                                 description:
                             </h2>

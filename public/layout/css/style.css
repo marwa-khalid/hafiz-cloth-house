@@ -10,7 +10,10 @@ body {
   
   a {
     font-family: 'Consolas'
+
 }
+
+
 /* navbar */
 .navbar 
 {
@@ -159,10 +162,64 @@ body {
 }
 
 /* homepage */
-.page-top-carousel 
+.top-content 
 {
-    max-width: 800px; /* Adjust this value to your desired width */
-    margin: 0 auto; /* Center the carousel */
+    width: 100%;
+    padding: 0;
+}
+
+.top-content .product-card-carousel-control-prev 
+{
+    border-bottom: 0;
+}
+
+.top-content .product-card-carousel-control-next 
+{
+    border-bottom: 0;
+}
+
+.top-content .carousel-indicators li 
+{
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+
+/* Custom CSS of ARROWS*/
+.product-card-carousel-control-prev,
+.product-card-carousel-control-next 
+{
+    width: 30px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+    opacity: 0.5; /* Optional: Set the initial opacity for the controls */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Adjust the positioning of the controls for different screen sizes */
+@media (max-width: 767.98px) 
+{
+    .product-card-carousel-control-prev,
+    .product-card-carousel-control-next 
+    {
+        width: 20px; /* Adjust the width for smaller screens */
+        height: 20px; /* Adjust the height for smaller screens */
+    }
+}
+
+/* Optional: Add some extra spacing between the controls and cards */
+/* Adjust the margin value as needed */
+.product-card-carousel-control-prev 
+{
+  margin-left: -10px; /* Negative margin to shift left */
+}
+
+.product-card-carousel-control-next 
+{
+  margin-right: -10px; /* Negative margin to shift right */
 }
 
 #body-container 
@@ -170,10 +227,45 @@ body {
     background: linear-gradient(135deg, #ffffff, #c4c0c0);
 }
 
-.page-top-carousel-item img 
+.page-top-carousel-item
 {
-    height: 300px; /* Adjust this value to your desired height */
-    object-fit: contain; /* Maintain image aspect ratio */
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+@media (max-width: 992px) 
+{
+    .page-top-carousel-item
+    {
+        height: 400px;
+    }
+}
+
+@media (max-width: 576px) 
+{
+    .page-top-carousel-item
+    {
+        height: 300px;
+    }
+}
+
+.video-wrapper 
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    /* transform: scale(1); */
+    transform-origin: top;
+}
+
+.video-wrapper video 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
 }
 
 .category-img 
@@ -208,7 +300,7 @@ body {
     left: 50%; /* Position the text at the horizontal center of the image container */
     transform: translate(-50%, -50%); /* Center the text using a transform */
     background-color: rgba(0, 0, 0, 0.7); /* Add a semi-transparent black background */
-    padding: 40px 20px;
+    padding: 20px 20px;
     border-radius: 5px;
     color: white; /* Set the text color to white */
     display: none; /* Hide the text by default */
@@ -405,7 +497,8 @@ body {
     transform: translateX(0);
 }
 
-@media (max-width: 992px) {
+@media (max-width: 992px) 
+{
     .read-more-link
     {
         opacity: 1;
@@ -415,7 +508,44 @@ body {
     }
 }
 
+/* Style for the dropdown button */
+.dropdown .btn 
+{
+    text-align: right;    
+    top: 50%; /* Center the button vertically */
+    right: 0; /* Position the button on the right side of the container */
+    transform: translateY(-50%)
+}
+  
+/* Style for the dropdown menu */
+.dropdown-menu 
+{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
 
+/* Style for dropdown headers */
+.dropdown-header 
+{
+    font-weight:bolder;
+    font-size: larger;
+    margin-top: 10px;
+    color: rgb(24, 24, 119);
+}
+
+/* Style for the price range input */
+.custom-range 
+{
+    width: 100%;
+}
+
+.form-check-input 
+{
+    margin-left: 1rem; /* Adjust the spacing as needed */
+}
+ 
 .category-img
 {
     max-height: 500px;
@@ -435,7 +565,8 @@ body {
     justify-content: space-between;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) 
+{
     .product-details 
     {
         padding-left: 5rem;
@@ -457,15 +588,19 @@ body {
     margin: 0 auto;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) 
+{
     .image-slider 
     {
         width: 500px;
     }
 }
-.both-buttons {
+
+.both-buttons 
+{
     display: flex;
 }
+
 .product-images
 {
     position: absolute;
@@ -491,30 +626,41 @@ body {
     cursor: pointer;
 }
 
+.filter-feature-dropdown-buttons-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#filter-dropdown-button,
+#sort-dropdown-button
+{
+    overflow: visible;
+}
+
 .product-images img.active
 {
     opacity: 0.5;
 }
 
 .details .product-brand
-{   
-   
+{
     text-transform: capitalize;
-    font-size: 30px;
-    font-weight: bold;
-    
+    font-size: 25px;
+    font-weight: bold;   
 }
 
 .product-price
 {
     font-weight: 700;
-    font-size: 30px;
+    font-size: 25px;
     color: rgb(24, 24, 119);
 }
 
 .product-actual-price
 {
-    font-size: 30px;
+    font-size: 25px;
     opacity: 0.5;
     text-decoration: line-through;
     margin: 0 20px;
@@ -540,7 +686,7 @@ body {
 
 .product-sub-heading
 {
-    font-size: 30px;
+    font-size: 25px;
     text-transform: uppercase;
     margin: 60px 0 10px;
     font-weight: 300;
@@ -588,6 +734,7 @@ body {
     margin-right: 2%;
     background: rgb(24, 24, 119);
     color: #fff;
+    text-transform: capitalize;
 }
 
 .img-lg-height 
@@ -605,21 +752,19 @@ body {
 
 .detail-des
 {
-   
     text-transform: capitalize;
 }
 
 .heading
 {
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom: 20px;
 }
 
 .des
 {
     color: #383838;
-    line-height: 25px;
-    
+    line-height: 25px;   
 }
 
 .line 
@@ -642,7 +787,6 @@ footer
     color: rgb(24, 24, 119); /* Blue color */
     padding-top: 10px; /* Adjust the padding as needed to decrease the height */
     padding-bottom: 10px;
-   
 }
 
 .footer a 
@@ -732,6 +876,254 @@ footer
 {
     background-color: rgb(24, 24, 119); /* Blue color */
     color: white; /* White color */
+}
+
+/* AboutUs Page */
+.AboutUsHeading
+{
+   font-weight: bold;
+}
+
+.full-width-img 
+{
+    margin: 0; /* Remove default Bootstrap margins */
+    padding: 0; /* Remove default Bootstrap padding */
+    width: 100vw; /* Set the image width to cover the full viewport width */
+    position: relative; /* Add a relative position to allow overflow */
+    left: 50%; /* Move the image to the left by 50% of its container width */
+    transform: translateX(-50%); /* Translate the image back by 50% of its own width */
+    height: 30rem;
+}
+
+.center-text
+{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.zoom-image 
+{
+    width: 400px;
+    transition: transform 0.3s ease; /* CSS transition for smooth animation */
+}
+
+/* Add animation on hover */
+.zoom-image:hover 
+{
+    transform: scale(1.1); /* Zoom-in effect, 1.1 is the scaling factor */
+}
+                      /* View Cart CSS */
+
+.HeadingOfCart
+{
+    margin-bottom: 5vh;
+}
+
+.viewcard
+{
+    margin: auto;
+    max-width: 950px;
+    width: 90%;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1rem;
+    border: transparent;
+}
+
+@media(max-width:767px)
+{
+    .card
+    {
+        margin: 3vh auto;
+    }
+}
+
+.shopcart
+{
+    background-color: #fff;
+    padding: 4vh 5vh;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+@media(max-width:767px)
+{
+    .cart
+    {
+        padding: 4vh;
+        border-bottom-left-radius: unset;
+        border-top-right-radius: 1rem;
+    }
+}
+
+.summary
+{
+    background-color: #ddd;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 4vh;
+    color: rgb(65, 65, 65);
+}
+
+@media(max-width:767px)
+{
+    .summary
+    {
+        border-top-right-radius: unset;
+        border-bottom-left-radius: 1rem;
+    }
+}
+
+.summary .col-2
+{
+    padding: 0;
+}
+
+.summary .col-10
+{
+    padding: 0;
+}
+
+.row
+{
+    margin: 0;
+}
+
+.HeadingOfCart b
+{
+    font-size: 1.5rem;
+}
+
+.main
+{
+    margin: 0;
+    padding: 2vh 0;
+    width: 100%;
+}
+
+.col-2, .colcart
+{
+    padding: 0 1vh;
+}
+
+.colcart a
+{
+    padding: 0 1vh;
+}
+
+.close
+{
+    margin-left: auto;
+    font-size: 0.7rem;
+}
+
+img
+{
+    width: 3.5rem;
+}
+
+.back-to-shop
+{
+    margin-top: 4.5rem;
+}
+
+h5
+{
+    margin-top: 4vh;
+}
+
+hr
+{
+    margin-top: 1.25rem;
+}
+
+form
+{
+    padding: 2vh 0;
+}
+
+select
+{
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1.5vh 1vh;
+    margin-bottom: 4vh;
+    outline: none;
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+}
+
+input
+{
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1vh;
+    margin-bottom: 4vh;
+    outline: none;
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+}
+
+input:focus::-webkit-input-placeholder
+{
+      color:transparent;
+}
+
+.cartbtn
+{
+    background-color: rgb(24, 24, 119);
+    border-color: rgb(24, 24, 119);
+    color: white;
+    width: 100%;
+    font-size: 0.7rem;
+    margin-top: 4vh;
+    padding: 1vh;
+    border-radius: 0;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-family: 'Consolas';
+}
+
+.cartbtn:focus
+{
+    box-shadow: none;
+    outline: none;
+    box-shadow: none;
+    color: white;
+    -webkit-box-shadow: none;
+    transition: none; 
+}
+
+.btn:hover
+{
+    color: white;
+}
+
+.read-more-link:hover
+{
+    color: black;
+    text-decoration: none;
+}
+
+#code
+{
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.253) , rgba(255, 255, 255, 0.185)), url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: center;
+}
+
+.summary1
+{
+    background-color: #ddd;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 1rem;
+    padding: 4vh;
+    color: rgb(65, 65, 65);
+  
+}
+
+.summary1 ul 
+{
+    margin: 0;
 }
 
 .navbar-toggler.custom-toggler .navbar-toggler-icon span 

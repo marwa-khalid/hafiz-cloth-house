@@ -1,0 +1,119 @@
+<html lang="en">
+    <head>
+        <title>
+            Hafiz Cloth House
+        </title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <%- include("./Components/ImportCssFiles"); %>
+    </head>
+    <body>
+        <!-- Embed NavBar Component -->
+        <%
+            var NavBarData = { "SignedIn": false, "UserType": '' };
+        %>
+        <%- include("./Components/NavBar", { NavBarData: NavBarData }); %>
+
+        <!-- Embed Breadcrumb Component -->
+        <%
+            var BreadcrumbData = [
+                                    {
+                                        "PageName": "Home",
+                                        "PageLink": "/"
+                                    },
+                                    {
+                                        "PageName": "Products",
+                                        "PageLink": "/products"
+                                    },
+                                    {
+                                        "PageName": "Cart",
+                                    }
+                                ];
+        %>
+        <%- include("./Components/Breadcrumb", {BreadcrumbData: BreadcrumbData}); %>
+
+
+
+        <div class="container-fluid" id="body-container">
+            <div class="card viewcard">
+                <div class="row">
+                    <div class="col-md-8 shopcart">
+                        <div class="HeadingOfCart">
+                            <div class="row">
+                                <div class="col colcart"><h4><b>Shopping Cart</b></h4></div>
+                                <div class="col colcart align-self-center text-right text-muted">3 items</div>
+                            </div>
+                        </div>    
+                        <div class="row border-top border-bottom">
+                            <div class="row main align-items-center">
+                                <div class="col-2"><img class="img-fluid" src="https://i.imgur.com/1GrakTl.jpg"></div>
+                                <div class="col colcart">
+                                    <div class="row text-muted">Shirt</div>
+                                    <div class="row">Cotton T-shirt</div>
+                                </div>
+                                <div class="col colcart">
+                                    <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+                                </div>
+                                <div class="col colcart">Rs 500.00 <span class="close">&#10005;</span></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row main align-items-center">
+                                <div class="col-2"><img class="img-fluid" src="https://i.imgur.com/ba3tvGm.jpg"></div>
+                                <div class="col colcart">
+                                    <div class="row text-muted">Shirt</div>
+                                    <div class="row">Cotton T-shirt</div>
+                                </div>
+                                <div class="col colcart">
+                                    <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+                                </div>
+                                <div class="col colcart"> Rs 500.00<span class="close">&#10005;</span></div>
+                            </div>
+                        </div>
+                        <div class="row border-top border-bottom">
+                            <div class="row main align-items-center">
+                                <div class="col-2"><img class="img-fluid" src="https://i.imgur.com/pHQ3xT3.jpg"></div>
+                                <div class="col colcart">
+                                    <div class="row text-muted">Shirt</div>
+                                    <div class="row">Cotton T-shirt</div>
+                                </div>
+                                <div class="col colcart">
+                                    <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+                                </div>
+                                <div class="col colcart">Rs 500.00 <span class="close">&#10005;</span></div>
+                            </div>
+                        </div>
+                        <div class="back-to-shop"><a href="#">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
+                    </div>
+                    <div class="col-md-4 summary">
+                        <div><h5><b>Summary</b></h5></div>
+                        <hr>
+                        <div class="row">
+                            <div class="col colcart" style="padding-left:0;">ITEMS 3</div>
+                            <div class="col text-right colcart">Rs.1500</div>
+                        </div>
+                        <form>
+                            <p>SHIPPING</p>
+                            <select><option class="text-muted">Standard-Delivery- Rs.200</option></select>
+                            <p>ADD PROMO CODE</p>
+                            <input id="code" placeholder="Enter your code">
+                        </form>
+                        <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+                            <div class="col colcart">TOTAL PRICE</div>
+                            <div class="col text-right colcart">Rs. 1700</div>
+                        </div>
+                       <a href="/BillingInfo" class="btn cartbtn">CHECKOUT </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+              <!-- Embed Footer Component -->
+              <%- include("./Components/Footer"); %>
+
+              <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+              <%- include("./Components/ImportJavascriptFiles"); %>
+          </body>
+      </html>
