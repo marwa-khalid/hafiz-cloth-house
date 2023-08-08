@@ -84,6 +84,11 @@ $(function ()
     {
         $(this).find('.img-subcontent').fadeOut(200);
     });
+
+    $(".filter-feature-dropdown-buttons-container .dropdown").hover(function (event)
+    {
+        event.preventDefault();
+    })
 });
 
 function RedirectToProducts(event)

@@ -626,21 +626,17 @@ body {
     cursor: pointer;
 }
 
-/* .filter-feature-dropdown-buttons-container
+.filter-feature-dropdown-buttons-container
 {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-} */
+    justify-content: flex-end;
+}
 
-/* .full-width-dropdown 
+#filter-dropdown-button,
+#sort-dropdown-button
 {
-    position: initial;
-} */
-
-.filter-feature-dropdown-buttons-container button
-{
-    margin-right: 2%;
+    overflow: visible;
 }
 
 .product-images img.active
