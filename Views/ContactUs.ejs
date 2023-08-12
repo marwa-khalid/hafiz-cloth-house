@@ -1,0 +1,157 @@
+<html lang="en">
+    <head>
+        <title>
+            Hafiz Cloth House
+        </title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <%- include("./Components/ImportCssFiles"); %>
+        <style>
+            .bd-placeholder-img {
+              font-size: 1.125rem;
+              text-anchor: middle;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+            }
+      
+            @media (min-width: 768px) {
+              .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+              }
+            }
+          </style>
+          <!-- Custom styles for this template -->
+          <link href="form-validation.css" rel="stylesheet">
+    </head>
+        <!-- Embed NavBar Component -->
+        <%
+            var NavBarData = { "SignedIn": false, "UserType": '' };
+        %>
+        <%- include("./Components/NavBar", { NavBarData: NavBarData }); %>
+
+        <!-- Embed Breadcrumb Component -->
+        <%
+            var BreadcrumbData = [
+                                    {
+                                        "PageName": "Home",
+                                        "PageLink": "/"
+                                    },
+                                    {
+                                        "PageName": "Products",
+                                        "PageLink": "/products"
+                                    },
+                                    {
+                                        "PageName": "Cart",
+                                        "PageLink": "/viewcart"
+                                    },
+                                    {
+                                        "PageName": "Billing Info",
+                                    }
+                                ];
+        %>
+        <%- include("./Components/Breadcrumb", {BreadcrumbData: BreadcrumbData}); %>
+
+
+
+        <section class="mb-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+                        <!--Section description-->
+                        <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+                            a matter of hours to help you.</p>
+                    
+                        <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                       <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="name" name="name" class="form-control">
+                            <label for="name" class="">Your name</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="email" name="email" class="form-control">
+                            <label for="email" class="">Your email</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="subject" name="subject" class="form-control">
+                            <label for="subject" class="">Subject</label>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                            <label for="message">Your message</label>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Grid row-->
+
+            </form>
+                            <div class="text-center text-md-center">
+                                <button type="submit" class="btn cart-btn" style="min-width: 6rem;">Send</button>
+                            </div>
+                            <div class="status"></div>
+                        </form>
+                    </div>
+                    <div class="col-md-3 py-4">
+                        <!-- Contact information content -->
+                        <div class="col-md-12 col-sm-6 col-12 text-center">
+                            <ul class="list-unstyled mb-0">
+                                <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                                    <p>Post Office Road, Near Post Office, Hafizabad</p>
+                                </li>
+                                <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                                    <p>+92 303 7022359</p>
+                                </li>
+                                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                                    <p>contact@hafizclothhouse.com</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        
+        <!-- Embed Footer Component -->
+        <%- include("./Components/Footer"); %>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <%- include("./Components/ImportJavascriptFiles"); %>
+    </body>
+</html>

@@ -18,7 +18,7 @@ $(function ()
         max: maxValueForPriceRange,
         step: 100,
         from: 1000,
-        to: 5000,
+        to: 8000,
         grid: false,
         prettify_enabled: true,
         prettify_separator: ",",
