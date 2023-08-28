@@ -490,9 +490,9 @@ function renderProductsData(inputParametersJSON)
         {
             if (currentIteration.productPics.length > 0)
             {
-                currentIteration.productPics[0] = currentIteration.productPics[0].replace(/ProductFilesUploads\\/g, '');
+                // currentIteration.productPics[0] = currentIteration.productPics[0].replace(/ProductFilesUploads\\/g, '');
 
-                var currentImageSrcURL = "/ProductFilesUploads/"+currentIteration.productPics[0];
+                var currentImageSrcURL = "/"+currentIteration.productPics[0];
             }
 
             if (currentIteration.productIsSaleCollection && currentIteration.productSalePercentage > 0 && currentIteration.productSalePercentage <= 100)
