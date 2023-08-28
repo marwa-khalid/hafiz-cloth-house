@@ -493,6 +493,7 @@ function renderProductsData(inputParametersJSON)
                 // currentIteration.productPics[0] = currentIteration.productPics[0].replace(/ProductFilesUploads\\/g, '');
 
                 var currentImageSrcURL = "/"+currentIteration.productPics[0];
+                console.log("currentImageSrcURL: " + currentImageSrcURL);
             }
 
             if (currentIteration.productIsSaleCollection && currentIteration.productSalePercentage > 0 && currentIteration.productSalePercentage <= 100)

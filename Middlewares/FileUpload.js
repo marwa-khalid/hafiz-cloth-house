@@ -31,14 +31,7 @@ var upload = multer({
                     }
                     else
                     {
-                        if (file.mimetype == "image/jpg" || file.mimetype == "image/png" || file.mimetype == "image/jpeg")
-                        {
-                            callback(null, true);
-                        }
-                        else
-                        {
-                            callback(null, false);
-                        }
+                        callback(null, true);
                     }
                 }
 }).array('productPics', 4);
