@@ -34,7 +34,7 @@ app.use(express.urlencoded({ extended: true }));
 // SET PUBLIC AND VIEW DIRECTORY PATHS
 var path = require('path');
 app.use(express.static(path.join(__dirname, "public")));
-app.use('/ProductFilesUploads', express.static('ProductFilesUploads'));
+app.use('/ProductFilesUploads', express.static(path.join(__dirname, "ProductFilesUploads")));
 app.set('views', path.join(__dirname, 'Views'));
 app.set('view engine', 'ejs');
 
