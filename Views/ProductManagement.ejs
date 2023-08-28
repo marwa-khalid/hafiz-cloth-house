@@ -1,0 +1,545 @@
+<html lang="en">
+    <head>
+        <title>
+            Hafiz Cloth House
+        </title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <%- include("./Components/ImportCssFiles"); %>
+        
+        <style>
+            .bd-placeholder-img {
+              font-size: 1.125rem;
+              text-anchor: middle;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+            }
+
+            #productImages {
+                border: 1px solid #ced4da;
+                padding: 8px;
+                border-radius: 4px;
+                width: 100%;
+            }
+
+            /* .radio-left {
+                display: flex;
+            } */
+
+            /* .custom-radio-buttons {
+                display: flex;
+                width: 75%;
+                justify-content: space-evenly;
+                align-items: center;
+            } */
+
+            /* Apply margin to each radio label for spacing */
+            /* .radio-label {
+                flex:1
+            } */
+                                               
+            @media (min-width: 768px) {
+              .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+              }
+            }
+        </style>
+    </head>
+        <!-- Embed NavBar Component -->
+        <%
+            var NavBarData = { "SignedIn": false, "UserType": '' };
+        %>
+        <%- include("./Components/NavBar", { NavBarData: NavBarData }); %>
+
+        <!-- Embed Breadcrumb Component -->
+        <%
+            var BreadcrumbData = [
+                                    {
+                                        "PageName": "Home",
+                                        "PageLink": "/"
+                                    },
+                                    {
+                                        "PageName": "Product Management",
+                                    }                                    
+                                ];
+        %>
+        <%- include("./Components/Breadcrumb", {BreadcrumbData: BreadcrumbData}); %>
+
+
+        <div id="body-container">
+            <div class="container py-1">
+                <div class="container mt-4 filter-feature-dropdown-buttons-container">
+                    <div class="dropdown container filter-feature-dropdown">
+                        <button class="btn btn-dark dropdown-toggle" type="button" id="filter-dropdown-button" 
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class='fa fa-filter'></i>  
+                        </button>
+
+                        <div id="filter-dropdown-menu" class="dropdown-menu full-width-dropdown" aria-labelledby="filterDropdown">
+                            <div class="dropdown-header">
+                                <h6>
+                                    Price Range
+                                </h6>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="priceRange" />
+                            </div>
+
+                            <h6 class="dropdown-header">
+                                Color
+                            </h6>
+                            <div class="row">
+                                <div class="col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="colorCheckbox">
+                                        <label class="form-check-label" for="colorCheckbox">White</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="colorCheckbox">
+                                        <label class="form-check-label" for="colorCheckbox">Black</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="colorCheckbox">
+                                        <label class="form-check-label" for="colorCheckbox">Red</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="colorCheckbox">
+                                        <label class="form-check-label" for="colorCheckbox">Blue</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="colorCheckbox">
+                                        <label class="form-check-label" for="colorCheckbox">Beige</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="colorCheckbox">
+                                        <label class="form-check-label" for="colorCheckbox">Grey</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="colorCheckbox">
+                                        <label class="form-check-label" for="colorCheckbox">Purple</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="colorCheckbox">
+                                        <label class="form-check-label" for="colorCheckbox">O-White</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h6 class="dropdown-header">
+                                Collections
+                            </h6>
+                            <div class="row">
+                                <div class="col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="subCategoryCheckbox1">
+                                        <label class="form-check-label" for="subCategoryCheckbox1">Shawl</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="subCategoryCheckbox2">
+                                        <label class="form-check-label" for="subCategoryCheckbox2">Cotton</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="subCategoryCheckbox2">
+                                        <label class="form-check-label" for="subCategoryCheckbox2">Boski</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="subCategoryCheckbox2">
+                                        <label class="form-check-label" for="subCategoryCheckbox2">Latha</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="subCategoryCheckbox2">
+                                        <label class="form-check-label" for="subCategoryCheckbox2">Wool</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="subCategoryCheckbox2">
+                                        <label class="form-check-label" for="subCategoryCheckbox2">Lawn</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="subCategoryCheckbox2">
+                                        <label class="form-check-label" for="subCategoryCheckbox2">One Piece</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="subCategoryCheckbox2">
+                                        <label class="form-check-label" for="subCategoryCheckbox2">Two Piece</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="subCategoryCheckbox2">
+                                        <label class="form-check-label" for="subCategoryCheckbox2">Lehnga</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="subCategoryCheckbox2">
+                                        <label class="form-check-label" for="subCategoryCheckbox2">Bridal</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="subCategoryCheckbox2">
+                                        <label class="form-check-label" for="subCategoryCheckbox2">Maxi</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="subCategoryCheckbox2">
+                                        <label class="form-check-label" for="subCategoryCheckbox2">Tail</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="d-flex justify-content-center">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="subCategoryCheckbox2">
+                                            <label class="form-check-label mr-5 pr-5" for="subCategoryCheckbox2">Wash & Wear</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown mx-3 filter-feature-dropdown">
+                        <button class="btn btn-dark dropdown-toggle" type="button" id="sort-dropdown-button" 
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sort By
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="sortDropdown" style="width:fit-content;">
+                            <a class="dropdown-item" href="#">Featured</a>
+                            <a class="dropdown-item" href="#">Best-selling</a>
+                            <a class="dropdown-item" href="#">Alphabetically, A-Z</a>
+                            <a class="dropdown-item" href="#">Alphabetically, Z-A</a>
+                            <a class="dropdown-item" href="#">Price, low to high</a>
+                            <a class="dropdown-item" href="#">Price, high to low</a>
+                            <a class="dropdown-item" href="#">Date, new to old</a>
+                            <a class="dropdown-item" href="#">Date, old to new</a>
+                        </div>
+                    </div>
+    
+                </div>
+
+                <div class="container d-flex justify-content-center align-items-center">
+                    <div class="AddNewProduct">
+                        <button class="btn btn-dark" type="button" id="addProductBtn">
+                                Add New Product
+                        </button>
+                    </div>
+                </div>
+
+                <!-- MODAL FOR ADD / UPDATE PRODUCT -->
+                <div class="modal" tabindex="-1" role="dialog" id="addUpdateProductModal">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">
+                                    Add/Update Product
+                                </h5>
+                                <button type="button" class="close addUpdateProductModal-close" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="productForm" encrypt="multipart/form-data">
+                                    <input type="hidden" id="productID" value="">
+
+                                    <div class="form-group">
+                                        <label for="productTitle"><b>Product Title</b></label>
+                                        <input type="text" class="form-control" id="productTitle" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label><b>Product Category</b></label><br>
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex flex-row">
+                                                <input type="radio" name="category" value="Men's Collection" id="menCategory"> 
+                                                <label class="radio-label">
+                                                    Men Collection
+                                                </label>
+                                            </div>
+
+                                            <div class="col-md-6 d-flex flex-row">
+                                                <input type="radio" name="category" value="Women's Collection" id="womenCategory"> 
+                                                <label class="radio-label">
+                                                    Women Collection
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group" id="subCategoryGroup" style="display: none;">
+                                        <label><b>Sub Category</b></label><br>
+                                        <div class="custom-radio-buttons" id="subCategoryOptions" >
+
+                                        </div>                                        
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="productDescription"><b>Product Description</b></label>
+                                        <textarea class="form-control" id="productDescription" rows="4"></textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="productImages"><b>Upload Product Images </b>(Max 4)</label>
+                                        <input type="file" class="form-control-file" id="productImages" accept="image/*" multiple>
+                                        <div id="selectedImages"></div>
+                                        <div id="errorMessages" class="text-danger"></div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="productPrice"><b>Product Quantity</b></label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><b>In-Stock Quantity: </b></span>
+                                            </div>
+                                            <input type="number" class="form-control" id="productInStockQuantity" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="productPrice"><b>Product Price</b></label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><b>Rs.</b></span>
+                                            </div>
+                                            <input type="number" class="form-control" id="productPrice" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="newCollection">
+                                            <label class="form-check-label" for="newCollection">
+                                                Add to New Collection
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="applySale">
+                                            <label class="form-check-label" for="applySale">
+                                                Apply Sale on Product
+                                            </label>
+                                        </div>
+                                        <div class="form-group" id="salePercentageGroup" style="display: none;">
+                                            <label for="salePercentage" class="mt-2">
+                                                <b>Sale Percentage</b>
+                                            </label>
+                                            <div class="input-group">
+                                                <input type="range" class="form-range" id="salePercentageSlider" min="0" max="100" step="5">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="salePercentageValue">50%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="deliveryDetails">
+                                            <b>Delivery Details</b>
+                                        </label>
+                                        <textarea class="form-control" id="deliveryDetails" rows="2"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="note">
+                                            <b>A Note</b>
+                                        </label>
+                                        <textarea class="form-control" id="note" rows="2"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary addUpdateProductModal-close">Close</button>
+                                <button type="button" class="btn btn-primary" id="addUpdateProductSubmitButton">Add/Update Product</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCTS CARDS -->
+                <div class="container py-1">
+                    <div class="container mt-1">
+                        <div class="row" id="admin-products-cards">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Embed Footer Component -->
+        <%- include("./Components/Footer"); %>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <%- include("./Components/ImportJavascriptFiles"); %>
+
+        <script>
+            const menCategoryCheckbox = document.getElementById('menCategory');
+            const womenCategoryCheckbox = document.getElementById('womenCategory');
+            const subCategoryGroup = document.getElementById('subCategoryGroup');
+
+            menCategoryCheckbox.addEventListener('change', toggleSubCategory);
+            womenCategoryCheckbox.addEventListener('change', toggleSubCategory);
+
+            function toggleSubCategory() 
+            {
+                if (womenCategoryCheckbox.checked || menCategoryCheckbox.checked) 
+                {
+                    subCategoryGroup.style.display = 'block';
+                } 
+                else
+                {
+                    subCategoryGroup.style.display = 'none';
+                }
+            }
+
+            const applySaleCheckbox = document.getElementById('applySale');
+            const salePercentageGroup = document.getElementById('salePercentageGroup');
+            const salePercentageSlider = document.getElementById('salePercentageSlider');
+            const salePercentageValue = document.getElementById('salePercentageValue');
+
+            applySaleCheckbox.addEventListener('change', toggleSalePercentage);
+            salePercentageSlider.addEventListener('input', updateSalePercentageValue);
+
+            function toggleSalePercentage() 
+            {
+                if (applySaleCheckbox.checked) 
+                {
+                    salePercentageGroup.style.display = 'block';
+                } 
+                else 
+                {
+                    salePercentageGroup.style.display = 'none';
+                }
+            }
+
+            function updateSalePercentageValue() 
+            {
+                salePercentageValue.textContent = `${salePercentageSlider.value}%`;
+            }
+
+            const productImagesInput = document.getElementById('productImages');
+            const selectedImagesDiv = document.getElementById('selectedImages');
+            const errorMessagesDiv = document.getElementById('errorMessages');
+
+            productImagesInput.addEventListener('change', updateSelectedImages);
+
+            function updateSelectedImages() 
+            {
+                $("#selectedImages").empty();
+                errorMessagesDiv.innerHTML = '';
+                
+                if (productImagesInput.files.length > 4) 
+                {                
+                    console.log(productImagesInput.files.length)
+                    const errorMessage = document.createElement('p');
+                    errorMessage.textContent = 'Please select up to four images.';
+                    errorMessage.classList.add('error-message');
+                    errorMessagesDiv.appendChild(errorMessage);
+                } 
+                else 
+                {
+                    for (const file of productImagesInput.files) 
+                    {
+                        const imagePreview = document.createElement('img');
+                        imagePreview.src = URL.createObjectURL(file);
+                        console.log(URL.createObjectURL(file));
+                        imagePreview.classList.add('selected-image');
+                        selectedImagesDiv.appendChild(imagePreview);
+                    }
+                }
+            }
+
+            const menCategoryRadio = document.getElementById("menCategory");
+            const womenCategoryRadio = document.getElementById("womenCategory");
+            const subCategoryOptions = document.getElementById("subCategoryOptions");
+
+            // Sub-category options for the Men Collection
+            const menSubCategories = ["Wash & Wear", "Cotton", "Boski", "Lattha", "Wool", "Lawn", "Shawl"];
+
+            const womenSubCategories = ["Two Piece", "Three Piece", "Bridal", "Lehnga", "Maxi", "Tail", "Shawl"];
+
+            function updateSubCategoryOptions() 
+            {
+                subCategoryOptions.innerHTML = ""; 
+                
+                if (menCategoryRadio.checked) 
+                {
+                    for (const subCategory of menSubCategories) 
+                    {
+                        const radioLabel = document.createElement("label");
+                        radioLabel.className = "radio-label";
+                        
+                        const radioInput = document.createElement("input");
+                        radioInput.type = "radio";
+                        radioInput.name = "subCategory";
+                        radioInput.value = subCategory;
+                        
+                        radioLabel.appendChild(radioInput);
+                        radioLabel.appendChild(document.createTextNode(subCategory));
+                        
+                        subCategoryOptions.appendChild(radioLabel);
+                    }
+                }
+
+                if (womenCategoryRadio.checked) 
+                {
+                    for (const subCategory of womenSubCategories) 
+                    {
+                        const radioLabel = document.createElement("label");
+                        radioLabel.className = "radio-label";
+                        
+                        const radioInput = document.createElement("input");
+                        radioInput.type = "radio";
+                        radioInput.name = "subCategory";
+                        radioInput.value = subCategory;
+                        
+                        radioLabel.appendChild(radioInput);
+                        radioLabel.appendChild(document.createTextNode(subCategory));
+                        
+                        subCategoryOptions.appendChild(radioLabel);
+                    }
+                }
+            }
+
+            menCategoryRadio.addEventListener("change", updateSubCategoryOptions);
+            womenCategoryRadio.addEventListener("change", updateSubCategoryOptions);
+
+            updateSubCategoryOptions();
+            
+            document.getElementById("addProductBtn").addEventListener("click", function() 
+            {
+                $("#addUpdateProductModal").modal("show");
+            });
+            
+        </script>
+    </body>
+</html>

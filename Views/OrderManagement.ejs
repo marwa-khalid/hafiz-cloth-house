@@ -1,0 +1,214 @@
+<html lang="en">
+    <head>
+        <title>
+            Hafiz Cloth House
+        </title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
+        <!-- Bootstrap CSS -->
+        <%- include("./Components/ImportCssFiles"); %>
+       
+          
+          <!-- Custom styles for this template -->
+          <link href="form-validation.css" rel="stylesheet">
+    </head>
+        <!-- Embed NavBar Component -->
+        <%
+            var NavBarData = { "SignedIn": false, "UserType": '' };
+        %>
+        <%- include("./Components/NavBar", { NavBarData: NavBarData }); %>
+
+        <!-- Embed Breadcrumb Component -->
+        <%
+            var BreadcrumbData = [
+                                    {
+                                        "PageName": "Home",
+                                        "PageLink": "/"
+                                    },
+                                    {
+                                        "PageName": "Orders",
+                                        "PageLink": "/OrderManagement"
+                                    }
+                                ];
+        %>
+        <%- include("./Components/Breadcrumb", {BreadcrumbData: BreadcrumbData}); %>
+
+       
+        <div class="container" style="width:100%";>
+            <h2> All Orders</h2>
+            <table class="table table-striped table-bordered" id="sortTable">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer Name</th>
+                        <th>Total Bill</th>
+                        <th>Total Products</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                    
+                <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Aesha</td>
+                      <td>1000</td>
+                      <td>3</td>
+                      <td><a href="#" class="btn btn-link view-details" data-toggle="modal" data-target="#orderModal"><i class="fas fa-eye"></i> View Details</a></td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Marwa</td>
+                      <td>1000</td>
+                      <td>3</td>
+                      <td><a href="#" class="btn btn-link view-details" data-toggle="modal" data-target="#orderModal"><i class="fas fa-eye"></i> View Details</a></td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Mehak</td>
+                      <td>1000</td>
+                      <td>3</td>
+                      <td><a href="#" class="btn btn-link view-details" data-toggle="modal" data-target="#orderModal"><i class="fas fa-eye"></i> View Details</a></td>
+                    <tr>
+                      <td>4</td>
+                      <td>Ali</td>
+                      <td>1300</td>
+                      <td>3</td>
+                      <td><a href="#" class="btn btn-link view-details" data-toggle="modal" data-target="#orderModal"><i class="fas fa-eye"></i> View Details</a></td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Anayah</td>
+                      <td>1300</td>
+                      <td>3</td>
+                      <td><a href="#" class="btn btn-link view-details" data-toggle="modal" data-target="#orderModal"><i class="fas fa-eye"></i> View Details</a></td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>Sara</td>
+                      <td>950</td>
+                      <td>3</td>
+                      <td><a href="#" class="btn btn-link view-details" data-toggle="modal" data-target="#orderModal"><i class="fas fa-eye"></i> View Details</a></td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>Babar</td>
+                      <td>750</td>
+                      <td>3</td>
+                      <td><a href="#" class="btn btn-link view-details" data-toggle="modal" data-target="#orderModal"><i class="fas fa-eye"></i> View Details</a></td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td>Nadia</td>
+                      <td>1100</td>
+                      <td>3</td>
+                      <td><a href="#" class="btn btn-link view-details" data-toggle="modal" data-target="#orderModal"><i class="fas fa-eye"></i> View Details</a></td>
+                    </tr>
+                    <tr>
+                      <td>9</td>
+                      <td>Omar</td>
+                      <td>900</td>
+                      <td>3</td>
+                      <td><a href="#" class="btn btn-link view-details" data-toggle="modal" data-target="#orderModal"><i class="fas fa-eye"></i> View Details</a></td>
+                    </tr>
+                    <tr>
+                      <td>10</td>
+                      <td>Lina</td>
+                      <td>1300</td>
+                      <td>3</td>
+                      <td><a href="#" class="btn btn-link view-details" data-toggle="modal" data-target="#orderModal"><i class="fas fa-eye"></i> View Details</a></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Amina</td>
+                        <td>1300</td>
+                        <td>3</td>
+                        <td><a href="#" class="btn btn-link view-details" data-toggle="modal" data-target="#orderModal"><i class="fas fa-eye"></i> View Details</a></td>
+                    </tr>
+                  </tbody>
+      
+            </table>
+
+            <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="orderModalLabel">Order Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="customer-info">
+                        <p>Customer Name: Aesha</p>
+                      </div>
+                      <div class="item-details">
+                        <h4>Item Details</h4>
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th>Product Name</th>
+                              <th>Price</th>
+                              <th>Image</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Blue Frock</td>
+                              <td>$200</td>
+                              <td>  <img src="../images/frock1.jpeg" alt="Item Image"  width="100"> </td>
+                            </tr>
+                            <tr>
+                                <td>Frock</td>
+                                <td>$200</td>
+                                <td>  <img src="../images/download.jpeg" alt="Item Image" width="100"> </td>
+                            </tr>
+                            <tr>
+                                <td>Pink Frock</td>
+                                <td>$50</td>
+                                <td>  <img src="../images/dress2.jpeg" alt="Item Image" width="100"> </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="total-price">
+                        <h4>Total Price</h4>
+                        <p>$300</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+        </div>
+
+        <!-- Embed Footer Component -->
+        <%- include("./Components/Footer"); %>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <%- include("./Components/ImportJavascriptFiles"); %>
+
+        <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+
+        <script>
+          $('#sortTable').DataTable({
+            "columns": [
+                null,   // Order ID Column
+                null,   // Customer Name Column
+                null,   // Total Bill Column
+                null,   // Number of Products Column
+                null    // Details Column
+            ]
+            });
+        </script>
+
+    </body>
+</html>
