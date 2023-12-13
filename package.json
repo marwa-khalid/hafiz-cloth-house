@@ -16,8 +16,7 @@
     "session": "^0.1.0"
   },
   "scripts": {
-    "start": "node index.js",
-    "build":"npm run build"
+    "start": "node index.js"
   },
   "engines": {
     "node": "18.x"
